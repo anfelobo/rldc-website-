@@ -3,9 +3,6 @@ import { useEffect, useRef } from "react";
 function GalleryCarousel() {
   // Lista de imágenes dummy (puedes agregar más nombres de archivos aquí)
   const images = [
-    "/galeria/01.jpg",
-    "/galeria/02.jpg",
-    "/galeria/03.jpg",
     "/galeria/04.JPG",
     "/galeria/05.JPG",
     "/galeria/06.JPG",
@@ -15,7 +12,7 @@ function GalleryCarousel() {
     "/galeria/11.png",
     "/galeria/12.png",
     "/galeria/14.png",
-    "/galeria/15.png",
+    "/galeria/15.png"
   
   ];
   const [current, setCurrent] = useState(0);
