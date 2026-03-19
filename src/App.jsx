@@ -18,6 +18,7 @@ const NavItem = ({ icon: IconComponent, label, value, onClick, isActive }) => ( 
   </button>
 );
 
+
 export default function App() {
   const [page, setPage] = useState("home");
 
@@ -38,7 +39,7 @@ export default function App() {
 
       {/* CONTENT */}
       <main className="p-8 max-w-6xl mx-auto">
-        {page === "home" && <Home setPage={setPage} />}
+        {page === "home" && <HomePage setPage={setPage} />}
         {page === "about" && <About />}
         {page === "activities" && <Activities />}
         {page === "contact" && <Contact />}
@@ -126,7 +127,7 @@ function Activities() {
   );
 }
 
-function Home({ setPage }) {
+function HomePage({ setPage }) {
   return (
     <div className="space-y-16">
       {/* Hero Section */}
