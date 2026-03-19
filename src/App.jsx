@@ -6,19 +6,17 @@ function GalleryCarousel() {
     "/galeria/01.jpg",
     "/galeria/02.jpg",
     "/galeria/03.jpg",
-    "/galeria/04.jpg",
-    "/galeria/05.jpg",
-    "/galeria/06.jpg",
+    "/galeria/04.JPG",
+    "/galeria/05.JPG",
+    "/galeria/06.JPG",
     "/galeria/07.jpg",
-    "/galeria/08.jpg",
     "/galeria/09.png",
     "/galeria/10.png",
     "/galeria/11.png",
     "/galeria/12.png",
-    "/galeria/13.png",
     "/galeria/14.png",
     "/galeria/15.png",
-    "/galeria/16.tif"
+  
   ];
   const [current, setCurrent] = useState(0);
   const [paused, setPaused] = useState(false);
