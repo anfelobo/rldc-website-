@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 // Carrusel de galería
 
 function GalleryCarousel() {
@@ -112,7 +112,7 @@ function GalleryCarousel() {
     </div>
   );
 }
-import { useState } from "react";
+// ...existing code...
 import { Mail, Users, Calendar, Home, Image as ImageIcon } from "lucide-react";
 import { MapContainer, TileLayer, Marker, Popup, CircleMarker } from 'react-leaflet';
 import L from 'leaflet';
@@ -773,7 +773,38 @@ function createCustomIcon(color) {
   });
 }
 
+// ...existing code...
 function Contact() {
+  const [showSuccess, setShowSuccess] = useState(false);
+  const [loading, setLoading] = useState(false);
+
+  // Formspree endpoint proporcionado por el usuario
+  const FORMSPREE_ENDPOINT = "https://formspree.io/f/mlgpzwya";
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    const form = e.target;
+    const data = new FormData(form);
+    try {
+      const res = await fetch(FORMSPREE_ENDPOINT, {
+        method: "POST",
+        body: data,
+        headers: {
+          Accept: "application/json",
+        },
+      });
+      if (res.ok) {
+        setShowSuccess(true);
+        form.reset();
+      }
+    } catch (err) {
+      // Error handling opcional
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <div>
       <div className="text-center mb-12">
@@ -785,15 +816,33 @@ function Contact() {
         </p>
       </div>
 
+      {/* Popup de éxito */}
+      {showSuccess && (
+        <div className="fixed inset-0 flex items-center justify-center z-50 bg-black/70">
+          <div className="bg-white rounded-2xl p-8 max-w-md w-full text-center shadow-2xl">
+            <h2 className="text-2xl font-bold mb-4 text-emerald-600">¡Solicitud enviada!</h2>
+            <p className="text-gray-700 mb-6">Hemos recibido tus datos, pronto nos pondremos en contacto contigo.<br/>¡Gracias por tu interés!</p>
+            <button
+              className="bg-gradient-to-r from-emerald-500 to-blue-500 text-white px-6 py-2 rounded-xl font-bold hover:from-emerald-600 hover:to-blue-600 transition"
+              onClick={() => setShowSuccess(false)}
+            >
+              Cerrar
+            </button>
+          </div>
+        </div>
+      )}
+
       {/* Formulario */}
       <div className="max-w-2xl mx-auto">
         <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
           <h2 className="text-2xl font-bold mb-6 text-blue-400 text-center">Solicitud de Membresía</h2>
-          <form className="space-y-6">
+          <form className="space-y-6" onSubmit={handleSubmit}>
             <div>
               <label className="block text-sm font-medium mb-2 text-gray-300">Nombre completo</label>
               <input
                 type="text"
+                name="nombre"
+                required
                 placeholder="Tu nombre completo"
                 className="w-full p-4 rounded-xl bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
               />
@@ -803,6 +852,8 @@ function Contact() {
               <label className="block text-sm font-medium mb-2 text-gray-300">Correo electrónico</label>
               <input
                 type="email"
+                name="email"
+                required
                 placeholder="tu@email.com"
                 className="w-full p-4 rounded-xl bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
               />
@@ -812,6 +863,8 @@ function Contact() {
               <label className="block text-sm font-medium mb-2 text-gray-300">Especialidad/Área de interés</label>
               <input
                 type="text"
+                name="especialidad"
+                required
                 placeholder="Ej: Astronomía, Biología, Física, etc."
                 className="w-full p-4 rounded-xl bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
               />
@@ -821,6 +874,7 @@ function Contact() {
               <label className="block text-sm font-medium mb-2 text-gray-300">Perfil en redes sociales</label>
               <input
                 type="text"
+                name="redes"
                 placeholder="@tuusuario o enlace a tu perfil"
                 className="w-full p-4 rounded-xl bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
               />
@@ -830,13 +884,19 @@ function Contact() {
               <label className="block text-sm font-medium mb-2 text-gray-300">Cuéntanos sobre ti</label>
               <textarea
                 rows="5"
+                name="mensaje"
+                required
                 placeholder="Describe tu experiencia en divulgación científica, proyectos en los que has trabajado, y por qué quieres unirte a la RLDC..."
                 className="w-full p-4 rounded-xl bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all resize-none"
               />
             </div>
 
-            <button className="w-full bg-gradient-to-r from-emerald-500 to-blue-500 hover:from-emerald-600 hover:to-blue-600 p-4 rounded-xl font-bold text-white transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
-              🚀 Enviar Solicitud de Membresía
+            <button
+              type="submit"
+              disabled={loading}
+              className="w-full bg-gradient-to-r from-emerald-500 to-blue-500 hover:from-emerald-600 hover:to-blue-600 p-4 rounded-xl font-bold text-white transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl disabled:opacity-60 disabled:cursor-not-allowed"
+            >
+              {loading ? "Enviando..." : "🚀 Enviar Solicitud de Membresía"}
             </button>
           </form>
         </div>
