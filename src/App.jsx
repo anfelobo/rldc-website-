@@ -7,8 +7,6 @@ function GalleryCarousel() {
     "/galeria/05.JPG",
     "/galeria/06.JPG",
     "/galeria/07.jpg",
-    "/galeria/09.png",
-    "/galeria/10.png",
     "/galeria/11.png",
     "/galeria/12.png",
     "/galeria/14.png",
