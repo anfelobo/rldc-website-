@@ -1,3 +1,75 @@
+import { useEffect, useRef } from "react";
+// Carrusel de galería
+function GalleryCarousel() {
+  // Lista de imágenes dummy (puedes agregar más nombres de archivos aquí)
+  const images = [
+    "/galeria/dummy1.jpg",
+    "/galeria/dummy2.png",
+    "/galeria/dummy3.webp"
+  ];
+  const [current, setCurrent] = useState(0);
+  const [paused, setPaused] = useState(false);
+  const intervalRef = useRef(null);
+
+  useEffect(() => {
+    if (!paused) {
+      intervalRef.current = setInterval(() => {
+        setCurrent((prev) => (prev + 1) % images.length);
+      }, 5000);
+    } else if (intervalRef.current) {
+      clearInterval(intervalRef.current);
+    }
+    return () => clearInterval(intervalRef.current);
+  }, [paused, images.length]);
+
+  const goTo = (idx) => {
+    setCurrent(idx);
+    setPaused(true);
+  };
+  const next = () => {
+    setCurrent((prev) => (prev + 1) % images.length);
+    setPaused(true);
+  };
+  const prev = () => {
+    setCurrent((prev) => (prev - 1 + images.length) % images.length);
+    setPaused(true);
+  };
+
+  return (
+    <div className="w-full max-w-2xl mx-auto my-12">
+      <div className="relative rounded-2xl overflow-hidden shadow-lg bg-black/20">
+        <img
+          src={images[current]}
+          alt={`Imagen ${current + 1}`}
+          className="w-full h-80 object-contain bg-white"
+        />
+        {/* Controles */}
+        <button onClick={prev} className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/40 text-white rounded-full p-2 hover:bg-black/70 transition">
+          &#8592;
+        </button>
+        <button onClick={next} className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/40 text-white rounded-full p-2 hover:bg-black/70 transition">
+          &#8594;
+        </button>
+        <button
+          onClick={() => setPaused((p) => !p)}
+          className="absolute bottom-2 right-1/2 translate-x-1/2 bg-black/40 text-white rounded-full px-4 py-1 text-sm hover:bg-black/70 transition"
+        >
+          {paused ? "Reanudar" : "Pausar"}
+        </button>
+        {/* Indicadores */}
+        <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-2">
+          {images.map((_, idx) => (
+            <button
+              key={idx}
+              onClick={() => goTo(idx)}
+              className={`w-3 h-3 rounded-full ${idx === current ? "bg-blue-400" : "bg-white/50"}`}
+            />
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
 import { useState } from "react";
 import { Mail, Users, Calendar, Home } from "lucide-react";
 import { MapContainer, TileLayer, Marker, Popup, CircleMarker } from 'react-leaflet';
@@ -42,6 +114,11 @@ export default function App() {
         {page === "about" && <About />}
         {page === "activities" && <Activities />}
         {page === "contact" && <Contact />}
+        {/* Galería */}
+        <section>
+          <h2 className="text-3xl font-bold mb-6 text-center text-white">Galería</h2>
+          <GalleryCarousel />
+        </section>
       </main>
     </div>
   );
@@ -347,7 +424,7 @@ function About() {
       instagram: "@semillero_tejedores"
     },
     {
-      name: "S Space Fan",
+      name: "Space Fan",
       role: "Divulgador Espacial",
       photo: "/divulgadores/@s_spacefan.png",
       description: "Apasionado por el espacio y la exploración espacial. Comparto noticias, curiosidades y conocimientos sobre el universo.",
@@ -371,7 +448,7 @@ function About() {
       name: "Anfelobo",
       role: "Divulgador Científico",
       photo: "/divulgadores/@anfelobo.png",
-      description: "Comunicador científico especializado en biología y ecología. Trabajo en hacer accesible la ciencia a través de contenido digital.",
+      description: "Divulgador científico, amante de la naturaleza y sus maravillas.",
       instagram: "@anfelobo"
     },
     {
