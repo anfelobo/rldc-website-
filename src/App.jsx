@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Mail, Users, Calendar } from "lucide-react";
+import { Mail, Users, Calendar, Home } from "lucide-react";
 import { MapContainer, TileLayer, Marker, Popup, CircleMarker } from 'react-leaflet';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
@@ -14,7 +14,7 @@ const NavItem = ({ icon: IconComponent, label, value, onClick, isActive }) => ( 
     }`}
   >
     <IconComponent size={18} className="md:w-5 md:h-5" />
-    {label}
+    <span className="hidden md:inline">{label}</span>
   </button>
 );
 
@@ -28,7 +28,7 @@ export default function App() {
         <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/10 to-blue-500/10" />
         <div className="relative">
           <nav className="flex justify-center gap-2 md:gap-6 p-4 md:p-6 bg-black/10 backdrop-blur-md border-b border-white/5 overflow-x-auto">
-            <NavItem icon={Users} label="Inicio" value="home" onClick={setPage} isActive={page === "home"} currentPage={page} />
+            <NavItem icon={Home} label="Inicio" value="home" onClick={setPage} isActive={page === "home"} currentPage={page} />
             <NavItem icon={Users} label="Nosotros" value="about" onClick={setPage} isActive={page === "about"} currentPage={page} />
             <NavItem icon={Calendar} label="Actividades" value="activities" onClick={setPage} isActive={page === "activities"} currentPage={page} />
             <NavItem icon={Mail} label="Contacto" value="contact" onClick={setPage} isActive={page === "contact"} currentPage={page} />
