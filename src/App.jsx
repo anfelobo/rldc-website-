@@ -1,24 +1,25 @@
 import { useState } from "react";
 import { Mail, Users, Calendar } from "lucide-react";
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import { MapContainer, TileLayer, Marker, Popup, CircleMarker } from 'react-leaflet';
+import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
+
+const NavItem = ({ icon: IconComponent, label, value, onClick, isActive }) => ( // eslint-disable-line no-unused-vars
+  <button
+    onClick={() => onClick(value)}
+    className={`flex items-center gap-3 px-6 py-3 rounded-2xl transition-all duration-300 font-medium cursor-pointer ${
+      isActive
+        ? "bg-gradient-to-r from-emerald-500 to-blue-500 text-white shadow-lg scale-105"
+        : "hover:bg-white/5 text-gray-300 hover:text-white hover:scale-105 backdrop-blur-sm"
+    }`}
+  >
+    <IconComponent size={20} />
+    {label}
+  </button>
+);
 
 export default function App() {
   const [page, setPage] = useState("home");
-
-  const NavItem = ({ icon: Icon, label, value }) => (
-    <button
-      onClick={() => setPage(value)}
-      className={`flex items-center gap-3 px-6 py-3 rounded-2xl transition-all duration-300 font-medium cursor-pointer ${
-        page === value
-          ? "bg-gradient-to-r from-emerald-500 to-blue-500 text-white shadow-lg scale-105"
-          : "hover:bg-white/5 text-gray-300 hover:text-white hover:scale-105 backdrop-blur-sm"
-      }`}
-    >
-      <Icon size={20} />
-      {label}
-    </button>
-  );
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-800 via-blue-900 to-indigo-900 text-white">
@@ -27,17 +28,17 @@ export default function App() {
         <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/10 to-blue-500/10" />
         <div className="relative">
           <nav className="flex justify-center gap-6 p-6 bg-black/10 backdrop-blur-md border-b border-white/5">
-            <NavItem icon={Users} label="Inicio" value="home" />
-            <NavItem icon={Users} label="Nosotros" value="about" />
-            <NavItem icon={Calendar} label="Actividades" value="activities" />
-            <NavItem icon={Mail} label="Contacto" value="contact" />
+            <NavItem icon={Users} label="Inicio" value="home" onClick={setPage} isActive={page === "home"} currentPage={page} />
+            <NavItem icon={Users} label="Nosotros" value="about" onClick={setPage} isActive={page === "about"} currentPage={page} />
+            <NavItem icon={Calendar} label="Actividades" value="activities" onClick={setPage} isActive={page === "activities"} currentPage={page} />
+            <NavItem icon={Mail} label="Contacto" value="contact" onClick={setPage} isActive={page === "contact"} currentPage={page} />
           </nav>
         </div>
       </header>
 
       {/* CONTENT */}
       <main className="p-8 max-w-6xl mx-auto">
-        {page === "home" && <Home />}
+        {page === "home" && <Home setPage={setPage} />}
         {page === "about" && <About />}
         {page === "activities" && <Activities />}
         {page === "contact" && <Contact />}
@@ -48,6 +49,12 @@ export default function App() {
 
 function Activities() {
   const events = [
+    {
+      title: "Festival de Astronomía de Villa de Leyva",
+      date: "Marzo 2026",
+      description: "Únete al festival astronómico más importante de Colombia. Observaciones nocturnas, charlas con expertos y actividades para toda la familia.",
+      icon: "🎭"
+    },
     {
       title: "Observación Lunar",
       date: "Abril 2026",
@@ -65,6 +72,12 @@ function Activities() {
       date: "Junio 2026",
       description: "Explora los fundamentos de la mecánica cuántica a través de experimentos interactivos y demostraciones.",
       icon: "⚛️"
+    },
+    {
+      title: "NASA Space Apps Challenge",
+      date: "Junio 2026",
+      description: "Participa en el hackathon global de NASA Space Apps. Resuelve problemas reales del espacio con datos de la NASA y crea soluciones innovadoras.",
+      icon: "🚀"
     },
     {
       title: "Noche de las Estrellas",
@@ -107,7 +120,7 @@ function Activities() {
   );
 }
 
-function Home() {
+function Home({ setPage }) {
   return (
     <div className="space-y-16">
       {/* Hero Section */}
@@ -297,140 +310,140 @@ function About() {
     {
       name: "Shaula Grupo Bioastronomía",
       role: "Grupo de Investigación Bioastronómica",
-      photo: "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+      photo: "/divulgadores/@shaulagrupobioastronomia.png",
       description: "Grupo dedicado al estudio de la vida en el universo. Realizamos investigaciones sobre exoplanetas habitables y la búsqueda de vida extraterrestre.",
       instagram: "@shaulagrupobioastronomia"
     },
     {
       name: "Proyecto Constelación",
       role: "Iniciativa Educativa Astronómica",
-      photo: "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+      photo: "/divulgadores/@proyecto_constelacion_.png",
       description: "Proyecto que conecta estudiantes con el cielo nocturno. Organizamos observaciones astronómicas y talleres de astronomía básica.",
       instagram: "@proyecto_constelacion_"
     },
     {
       name: "Semillero Tejedores",
       role: "Grupo de Investigación Juvenil",
-      photo: "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+      photo: "/divulgadores/@semillero_tejedores.png",
       description: "Semillero de investigación que forma jóvenes científicos. Nos enfocamos en proyectos interdisciplinarios de ciencia y tecnología.",
       instagram: "@semillero_tejedores"
     },
     {
       name: "S Space Fan",
       role: "Divulgador Espacial",
-      photo: "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+      photo: "/divulgadores/@s_spacefan.png",
       description: "Apasionado por el espacio y la exploración espacial. Comparto noticias, curiosidades y conocimientos sobre el universo.",
       instagram: "@s_spacefan"
     },
     {
       name: "Turismo hacia las Estrellas",
       role: "Guía Astronómico Turístico",
-      photo: "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+      photo: "/divulgadores/@turismohacialasestrellas.png",
       description: "Especialistas en turismo astronómico. Organizamos viajes a lugares con cielos oscuros y experiencias de observación únicas.",
       instagram: "@turismohacialasestrellas"
     },
     {
       name: "Semillero Ceres",
       role: "Grupo de Astronomía",
-      photo: "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+      photo: "/divulgadores/@semillero_ceres.png",
       description: "Semillero dedicado al estudio de asteroides y cuerpos menores del sistema solar. Investigamos el asteroide Ceres y otros objetos.",
       instagram: "@semillero_ceres"
     },
     {
       name: "Anfelobo",
       role: "Divulgador Científico",
-      photo: "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+      photo: "/divulgadores/@anfelobo.png",
       description: "Comunicador científico especializado en biología y ecología. Trabajo en hacer accesible la ciencia a través de contenido digital.",
       instagram: "@anfelobo"
     },
     {
       name: "Museo del Vidrio de Bogotá",
       role: "Institución Cultural Científica",
-      photo: "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+      photo: "/divulgadores/@museodelvidriodebogota.png",
       description: "Museo que combina arte, ciencia y tecnología del vidrio. Realizamos exposiciones y talleres sobre ciencia de materiales.",
       instagram: "@museodelvidriodebogota"
     },
     {
       name: "Arka Vitae",
       role: "Grupo de Paleontología",
-      photo: "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+      photo: "/divulgadores/@arkavitae.png",
       description: "Especialistas en paleontología y evolución. Estudiamos fósiles y la historia de la vida en la Tierra.",
       instagram: "@arkavitae"
     },
     {
       name: "Laura Sofía",
       role: "Divulgadora Científica",
-      photo: "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+      photo: "/divulgadores/@lau_sofiaoficial.png",
       description: "Comunicadora científica enfocada en astronomía y física. Creo contenido educativo para jóvenes y familias.",
       instagram: "@lau_sofiaoficial"
     },
     {
       name: "Cefeidas BDI",
       role: "Grupo de Astronomía Estelar",
-      photo: "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+      photo: "/divulgadores/@cefeidas.bdi.png",
       description: "Grupo dedicado al estudio de estrellas variables Cefeidas. Usamos estos 'candiles cósmicos' para medir distancias en el universo.",
       instagram: "@cefeidas.bdi"
     },
     {
       name: "Alexander Urzola",
       role: "Divulgador Científico",
-      photo: "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+      photo: "/divulgadores/@alexanderurzola.png",
       description: "Especialista en neurociencia y psicología. Comparto conocimientos sobre el funcionamiento del cerebro humano.",
       instagram: "@alexanderurzola"
     },
     {
       name: "Planetario Cosmo",
       role: "Centro de Divulgación Astronómica",
-      photo: "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+      photo: "/divulgadores/@planetario_cosmo.png",
       description: "Planetario dedicado a la educación astronómica. Ofrecemos proyecciones, talleres y charlas sobre el universo.",
       instagram: "@planetario_cosmo"
     },
     {
       name: "Sci Cousins",
       role: "Divulgadores Familiares",
-      photo: "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+      photo: "/divulgadores/@scicousins.png",
       description: "Hermanos dedicados a la divulgación científica familiar. Creamos contenido educativo divertido para todas las edades.",
       instagram: "@scicousins"
     },
     {
       name: "Exploradores de Estrellas",
       role: "Grupo de Astronomía Juvenil",
-      photo: "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+      photo: "/divulgadores/@exploradoresdeestrellas.png",
       description: "Grupo de jóvenes exploradores del universo. Realizamos observaciones, proyectos científicos y actividades educativas.",
       instagram: "@exploradoresdeestrellas"
     },
     {
       name: "Astronomízate",
       role: "Plataforma de Divulgación Astronómica",
-      photo: "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+      photo: "/divulgadores/@astronomizate_oficial.png",
       description: "Plataforma dedicada a popularizar la astronomía. Ofrecemos cursos, talleres y contenido educativo sobre el universo.",
       instagram: "@astronomizate_oficial"
     },
     {
       name: "Revista Petroglifos",
       role: "Publicación Científica",
-      photo: "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+      photo: "/divulgadores/@revistapetroglifos.png",
       description: "Revista especializada en arqueoastronomía y petroglifos. Exploramos la relación entre antiguas culturas y el cielo.",
       instagram: "@revistapetroglifos"
     },
     {
       name: "Grupo Astro Wow",
       role: "Divulgadores Astronómicos",
-      photo: "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+      photo: "/divulgadores/@grupoastrowow.png",
       description: "Equipo apasionado por compartir el 'wow' de la astronomía. Creamos contenido que maravilla y educa sobre el universo.",
       instagram: "@grupoastrowow"
     },
     {
       name: "Gaute de Astronomía",
       role: "Divulgador Astronómico",
-      photo: "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+      photo: "/divulgadores/@gauteovanastronomia.png",
       description: "Especialista en astronomía con enfoque en la divulgación. Comparto conocimientos sobre el universo de manera clara y apasionada.",
       instagram: "@gauteovanastronomia"
     },
     {
       name: "El Microscopio Podcast",
       role: "Podcast Científico",
-      photo: "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+      photo: "/divulgadores/@el_microscopio_podcast.png",
       description: "Podcast dedicado a explorar el mundo microscópico. Hablamos de biología celular, microbiología y ciencia molecular.",
       instagram: "@el_microscopio_podcast"
     }
@@ -454,11 +467,11 @@ function About() {
             className="group relative bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
           >
             {/* Imagen de fondo */}
-            <div className="relative h-32 flex items-center justify-center bg-gradient-to-br from-blue-100 to-purple-100 rounded-t-2xl">
+            <div className="relative h-40 flex items-center justify-center bg-gradient-to-br from-blue-100 to-purple-100 rounded-t-2xl">
               <img
                 src={member.photo}
                 alt={member.name}
-                className="w-16 h-16 object-contain"
+                className="w-24 h-24 object-contain rounded-lg"
               />
             </div>
 
@@ -482,50 +495,47 @@ function About() {
         ))}
       </div>
 
-      {/* Sección adicional */}
-      <div className="mt-16 text-center">
-        <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 max-w-4xl mx-auto">
-          <h2 className="text-2xl font-bold mb-4 text-blue-400">Nuestra Misión</h2>
-          <p className="text-gray-300 leading-relaxed">
-            Creemos que la ciencia debe ser para todos. Nuestro objetivo es
-            democratizar el conocimiento científico, creando contenido accesible,
-            interactivo y emocionante que inspire curiosidad y fomente el pensamiento crítico.
-          </p>
-        </div>
-      </div>
-
       <Mapa />
     </div>
   );
 }
 
 function Mapa() {
+  // Ubicaciones con coordenadas y colores
   const locations = [
     {
       country: "Colombia",
       count: 17,
-      position: [4.5709, -74.2973], // Bogotá
-      description: "17 divulgadores científicos"
+      position: [4.5709, -74.2973],
+      description: "17 divulgadores científicos",
+      color: "#10b981" // Emerald
     },
     {
       country: "México",
       count: 2,
-      position: [23.6345, -102.5528], // Centro de México
-      description: "2 divulgadores científicos"
+      position: [23.6345, -102.5528],
+      description: "2 divulgadores científicos",
+      color: "#3b82f6" // Blue
     },
     {
       country: "Guatemala",
       count: 1,
-      position: [15.7835, -90.2308], // Centro de Guatemala
-      description: "1 divulgador científico"
+      position: [15.7835, -90.2308],
+      description: "1 divulgador científico",
+      color: "#8b5cf6" // Purple
     },
     {
       country: "Venezuela",
       count: 1,
-      position: [6.4238, -66.5897], // Centro de Venezuela
-      description: "1 divulgador científico"
+      position: [6.4238, -66.5897],
+      description: "1 divulgador científico",
+      color: "#ec4899" // Pink
     }
   ];
+
+  // Posición inicial centrada en América Latina
+  const centerMap = [10.5, -80];
+  const zoomLevel = 4;
 
   return (
     <div className="mt-16">
@@ -539,39 +549,85 @@ function Mapa() {
       </div>
 
       <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
-        <MapContainer
-          center={[10, -75]}
-          zoom={4}
-          style={{ height: '400px', width: '100%' }}
-          className="rounded-xl"
-        >
-          <TileLayer
-            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-          />
-          {locations.map((location, index) => (
-            <Marker key={index} position={location.position}>
-              <Popup>
-                <div className="text-center">
-                  <h3 className="font-bold text-lg">{location.country}</h3>
-                  <p className="text-blue-600">{location.description}</p>
-                </div>
-              </Popup>
-            </Marker>
-          ))}
-        </MapContainer>
+        {/* Contenedor del Mapa */}
+        <div className="map-container mb-8">
+          <MapContainer
+            center={centerMap}
+            zoom={zoomLevel}
+            style={{ height: '100%', width: '100%' }}
+            className="rounded-xl"
+          >
+            <TileLayer
+              attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+            />
 
-        <div className="mt-6 grid grid-cols-2 md:grid-cols-4 gap-4">
+            {/* Renderizar Marcadores */}
+            {locations.map((location, index) => (
+              <Marker
+                key={index}
+                position={location.position}
+                icon={createCustomIcon(location.color)}
+              >
+                <Popup className="custom-popup">
+                  <div className="text-center">
+                    <h4 className="font-bold text-lg mb-2">{location.country}</h4>
+                    <p className="text-sm mb-1">{location.description}</p>
+                    <div className="text-2xl font-bold text-blue-600">
+                      {location.count}
+                    </div>
+                  </div>
+                </Popup>
+              </Marker>
+            ))}
+
+            {/* Círculos de radio para visualizar cobertura */}
+            {locations.map((location, index) => (
+              <CircleMarker
+                key={`circle-${index}`}
+                center={location.position}
+                radius={15}
+                fillOpacity={0.1}
+                color={location.color}
+                weight={2}
+              />
+            ))}
+          </MapContainer>
+        </div>
+
+        {/* Estadísticas bajo el mapa */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {locations.map((location, index) => (
-            <div key={index} className="text-center p-3 bg-white/10 rounded-lg">
-              <div className="text-2xl font-bold text-blue-400">{location.count}</div>
-              <div className="text-sm text-gray-300">{location.country}</div>
+            <div
+              key={index}
+              className="text-center p-4 bg-gradient-to-br from-white/10 to-white/5 rounded-xl hover:from-white/20 hover:to-white/10 transition-all cursor-pointer border border-white/5"
+            >
+              <div className="text-3xl font-bold bg-gradient-to-r from-emerald-400 to-blue-500 bg-clip-text text-transparent">
+                {location.count}
+              </div>
+              <div className="text-sm text-gray-300 mt-1">{location.country}</div>
             </div>
           ))}
         </div>
       </div>
     </div>
   );
+}
+
+// Función auxiliar para crear iconos personalizados
+function createCustomIcon(color) {
+  return L.icon({
+    iconUrl: `data:image/svg+xml;base64,${btoa(`
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 41" width="32" height="41">
+        <path d="M16 0C7.16 0 0 7.16 0 16c0 11 16 25 16 25s16-14 16-25c0-8.84-7.16-16-16-16z" fill="${color}"/>
+        <circle cx="16" cy="15" r="6" fill="white"/>
+      </svg>
+    `)}`,
+    iconSize: [32, 41],
+    iconAnchor: [16, 41],
+    popupAnchor: [0, -35],
+    className: 'marker-icon-custom'
+  });
 }
 
 function Contact() {
