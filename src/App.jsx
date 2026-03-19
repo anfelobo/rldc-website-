@@ -114,12 +114,12 @@ export default function App() {
         {page === "about" && <About />}
         {page === "activities" && <Activities />}
         {page === "contact" && <Contact />}
-        {/* Galería */}
-        <section>
-          <h2 className="text-3xl font-bold mb-6 text-center text-white">Galería</h2>
-          <GalleryCarousel />
-        </section>
       </main>
+      {/* Galería a pantalla completa */}
+      <section className="w-full bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 py-16">
+        <h2 className="text-4xl font-bold mb-10 text-center text-white">Galería</h2>
+        <GalleryCarousel />
+      </section>
     </div>
   );
 }
