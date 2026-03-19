@@ -27,7 +27,7 @@ function GalleryCarousel() {
           setCurrent((prev) => (prev + 1) % images.length);
           setFade(false);
         }, 400);
-      }, 2000);
+      }, 3000);
     } else if (intervalRef.current) {
       clearInterval(intervalRef.current);
     }
