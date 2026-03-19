@@ -9,8 +9,8 @@ function GalleryCarousel() {
     "/galeria/07.jpg",
     "/galeria/11.png",
     "/galeria/12.png",
-    "/galeria/14.png",
-    "/galeria/15.png"
+    "/galeria/10.png",
+    "/galeria/09.png"
   ];
   const [current, setCurrent] = useState(0);
   const [prevIdx, setPrevIdx] = useState(0);
