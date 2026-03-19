@@ -7,13 +7,13 @@ import 'leaflet/dist/leaflet.css';
 const NavItem = ({ icon: IconComponent, label, value, onClick, isActive }) => ( // eslint-disable-line no-unused-vars
   <button
     onClick={() => onClick(value)}
-    className={`flex items-center gap-3 px-6 py-3 rounded-2xl transition-all duration-300 font-medium cursor-pointer ${
+    className={`flex items-center gap-2 md:gap-3 px-3 md:px-6 py-2 md:py-3 rounded-2xl transition-all duration-300 font-medium cursor-pointer text-sm md:text-base ${
       isActive
         ? "bg-gradient-to-r from-emerald-500 to-blue-500 text-white shadow-lg scale-105"
         : "hover:bg-white/5 text-gray-300 hover:text-white hover:scale-105 backdrop-blur-sm"
     }`}
   >
-    <IconComponent size={20} />
+    <IconComponent size={18} className="md:w-5 md:h-5" />
     {label}
   </button>
 );
@@ -27,7 +27,7 @@ export default function App() {
       <header className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/10 to-blue-500/10" />
         <div className="relative">
-          <nav className="flex justify-center gap-6 p-6 bg-black/10 backdrop-blur-md border-b border-white/5">
+          <nav className="flex justify-center gap-2 md:gap-6 p-4 md:p-6 bg-black/10 backdrop-blur-md border-b border-white/5 overflow-x-auto">
             <NavItem icon={Users} label="Inicio" value="home" onClick={setPage} isActive={page === "home"} currentPage={page} />
             <NavItem icon={Users} label="Nosotros" value="about" onClick={setPage} isActive={page === "about"} currentPage={page} />
             <NavItem icon={Calendar} label="Actividades" value="activities" onClick={setPage} isActive={page === "activities"} currentPage={page} />
