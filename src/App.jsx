@@ -118,6 +118,16 @@ function Activities() {
                 <h2 className="text-2xl font-bold mb-2 text-blue-300">{event.title}</h2>
                 <p className="text-purple-300 font-medium mb-3">{event.date}</p>
                 <p className="text-gray-300 leading-relaxed">{event.description}</p>
+                {event.link && (
+                  <a
+                    href={event.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block mt-4 px-4 py-2 bg-gradient-to-r from-emerald-500 to-blue-500 text-white rounded-lg shadow hover:from-emerald-600 hover:to-blue-600 transition-colors duration-200 font-semibold"
+                  >
+                    Ver más
+                  </a>
+                )}
               </div>
             </div>
           </div>
