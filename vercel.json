@@ -2,6 +2,11 @@
   "version": 2,
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
+  "functions": {
+    "package.json": {
+      "runtime": "nodejs24.x"
+    }
+  },
   "routes": [
     {
       "src": "/(.*)",
