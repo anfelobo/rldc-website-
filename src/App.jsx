@@ -171,7 +171,9 @@ function HomePage({ setPage }) {
             </div>
             <div className="flex justify-center">
               <div className="w-64 h-64 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full flex items-center justify-center">
-                <img src="/divulgadores/logo_red.png" alt="Logo RLDC" className="w-40 h-40 object-contain" />
+                <div className="w-40 h-40 rounded-full overflow-hidden bg-white flex items-center justify-center">
+                  <img src="/divulgadores/logo_red.png" alt="Logo RLDC" className="w-full h-full object-contain" />
+                </div>
               </div>
             </div>
           </div>
