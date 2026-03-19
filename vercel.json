@@ -4,7 +4,7 @@
   "outputDirectory": "dist",
   "functions": {
     "package.json": {
-      "runtime": "nodejs24.x"
+      "runtime": "nodejs20.x"
     }
   },
   "routes": [
