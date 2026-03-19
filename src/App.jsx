@@ -25,10 +25,9 @@ export default function App() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-800 via-blue-900 to-indigo-900 text-white">
       {/* HEADER */}
-      <header className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/10 to-blue-500/10" />
-        <div className="relative">
-          <nav className="sticky top-0 z-50 flex justify-center gap-2 md:gap-6 p-4 md:p-6 bg-black/10 backdrop-blur-md border-b border-white/5 overflow-x-auto">
+      <header className="sticky top-0 z-50 bg-gradient-to-r from-emerald-500/10 to-blue-500/10">
+        <div>
+          <nav className="flex justify-center gap-2 md:gap-6 p-4 md:p-6 bg-black/10 backdrop-blur-md border-b border-white/5 overflow-x-auto">
             <NavItem icon={Home} label="Inicio" value="home" onClick={setPage} isActive={page === "home"} currentPage={page} />
             <NavItem icon={Users} label="Nosotros" value="about" onClick={setPage} isActive={page === "about"} currentPage={page} />
             <NavItem icon={Calendar} label="Actividades" value="activities" onClick={setPage} isActive={page === "activities"} currentPage={page} />
