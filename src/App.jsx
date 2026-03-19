@@ -3,9 +3,22 @@ import { useEffect, useRef } from "react";
 function GalleryCarousel() {
   // Lista de imágenes dummy (puedes agregar más nombres de archivos aquí)
   const images = [
-    "/galeria/dummy1.jpg",
-    "/galeria/dummy2.png",
-    "/galeria/dummy3.webp"
+    "/galeria/01.jpg",
+    "/galeria/02.jpg",
+    "/galeria/03.jpg",
+    "/galeria/04.jpg",
+    "/galeria/05.jpg",
+    "/galeria/06.jpg",
+    "/galeria/07.jpg",
+    "/galeria/08.jpg",
+    "/galeria/09.png",
+    "/galeria/10.png",
+    "/galeria/11.png",
+    "/galeria/12.png",
+    "/galeria/13.png",
+    "/galeria/14.png",
+    "/galeria/15.png",
+    "/galeria/16.tif"
   ];
   const [current, setCurrent] = useState(0);
   const [paused, setPaused] = useState(false);
@@ -103,8 +116,9 @@ export default function App() {
             <NavItem icon={Home} label="Inicio" value="home" onClick={setPage} isActive={page === "home"} currentPage={page} />
             <NavItem icon={Users} label="Nosotros" value="about" onClick={setPage} isActive={page === "about"} currentPage={page} />
             <NavItem icon={Calendar} label="Actividades" value="activities" onClick={setPage} isActive={page === "activities"} currentPage={page} />
-            <NavItem icon={Mail} label="Contacto" value="contact" onClick={setPage} isActive={page === "contact"} currentPage={page} />
             <NavItem icon={ImageIcon} label="Galería" value="gallery" onClick={setPage} isActive={page === "gallery"} currentPage={page} />
+            <NavItem icon={Mail} label="Contacto" value="contact" onClick={setPage} isActive={page === "contact"} currentPage={page} />
+
           </nav>
         </div>
       </header>
