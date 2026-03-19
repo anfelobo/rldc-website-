@@ -14,7 +14,7 @@ const NavItem = ({ icon: IconComponent, label, value, onClick, isActive }) => ( 
     }`}
   >
     <IconComponent size={18} className="md:w-5 md:h-5" />
-    <span className="opacity-0 md:opacity-100 md:inline-block">{label}</span>
+    <span className="hidden md:inline">{label}</span>
   </button>
 );
 
@@ -53,37 +53,43 @@ function Activities() {
       title: "Festival de Astronomía de Villa de Leyva",
       date: "Marzo 2026",
       description: "Únete al festival astronómico más importante de Colombia. Observaciones nocturnas, charlas con expertos y actividades para toda la familia.",
-      icon: "🎭"
+      icon: "🎭",
+      link: "https://festivalvillaastronomia.com"
     },
     {
       title: "Observación Lunar",
       date: "Abril 2026",
       description: "Únete a nuestra sesión de observación astronómica para admirar la Luna y aprender sobre sus fases y características.",
-      icon: "🌙"
+      icon: "🌙",
+      link: "https://tusitio.com/fisica-cuantica"
     },
     {
       title: "Charla de Astrofotografía",
       date: "Mayo 2026",
       description: "Descubre los secretos de la fotografía astronómica con expertos que compartirán técnicas y equipo necesario.",
-      icon: "📸"
+      icon: "📸",
+      link: "https://tusitio.com/fisica-cuantica"
     },
     {
       title: "Taller de Física Cuántica",
       date: "Junio 2026",
       description: "Explora los fundamentos de la mecánica cuántica a través de experimentos interactivos y demostraciones.",
-      icon: "⚛️"
+      icon: "⚛️",
+      link: "https://tusitio.com/fisica-cuantica"
     },
     {
       title: "NASA Space Apps Challenge",
       date: "Junio 2026",
       description: "Participa en el hackathon global de NASA Space Apps. Resuelve problemas reales del espacio con datos de la NASA y crea soluciones innovadoras.",
-      icon: "🚀"
+      icon: "🚀",
+      link: "https://www.spaceappschallenge.org/"
     },
     {
       title: "Noche de las Estrellas",
       date: "Julio 2026",
       description: "Evento especial con telescopios profesionales y charlas sobre constelaciones y mitología astronómica.",
-      icon: "⭐"
+      icon: "⭐",
+      link: "https://tusitio.com/fisica-cuantica"
     }
   ];
 
