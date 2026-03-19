@@ -23,15 +23,21 @@ function GalleryCarousel() {
   useEffect(() => {
     if (!paused) {
       intervalRef.current = setInterval(() => {
-        handleNext();
-      }, 5000);
+        setFade(true);
+        setTimeout(() => {
+          setPrevIdx((prev) => current);
+          setCurrent((prev) => (prev + 1) % images.length);
+          setFade(false);
+        }, 400);
+      }, 2000);
     } else if (intervalRef.current) {
       clearInterval(intervalRef.current);
     }
     return () => clearInterval(intervalRef.current);
     // eslint-disable-next-line
-  }, [paused, images.length]);
+  }, [paused, images.length, current]);
 
+  // Solo pausar cuando el usuario interactúa
   const handleNext = () => {
     setFade(true);
     setTimeout(() => {
