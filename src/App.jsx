@@ -56,6 +56,13 @@ function Activities() {
       icon: "🎭",
       link: "https://festivaldeastronomia.com"
     },
+  {
+      title: "NASA Space Apps Challenge",
+      date: "Junio 2026",
+      description: "Participa en el hackathon global de NASA Space Apps. Resuelve problemas reales del espacio con datos de la NASA y crea soluciones innovadoras.",
+      icon: "🚀",
+      link: "https://www.spaceappschallenge.org/"
+    },
     {
       title: "Observación Lunar",
       date: "Abril 2026",
@@ -76,13 +83,6 @@ function Activities() {
       description: "Explora los fundamentos de la mecánica cuántica a través de experimentos interactivos y demostraciones.",
       icon: "⚛️",
       link: "https://tusitio.com/fisica-cuantica"
-    },
-    {
-      title: "NASA Space Apps Challenge",
-      date: "Junio 2026",
-      description: "Participa en el hackathon global de NASA Space Apps. Resuelve problemas reales del espacio con datos de la NASA y crea soluciones innovadoras.",
-      icon: "🚀",
-      link: "https://www.spaceappschallenge.org/"
     },
     {
       title: "Noche de las Estrellas",
