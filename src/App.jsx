@@ -71,7 +71,7 @@ function GalleryCarousel() {
   );
 }
 import { useState } from "react";
-import { Mail, Users, Calendar, Home } from "lucide-react";
+import { Mail, Users, Calendar, Home, Image as ImageIcon } from "lucide-react";
 import { MapContainer, TileLayer, Marker, Popup, CircleMarker } from 'react-leaflet';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
@@ -104,22 +104,27 @@ export default function App() {
             <NavItem icon={Users} label="Nosotros" value="about" onClick={setPage} isActive={page === "about"} currentPage={page} />
             <NavItem icon={Calendar} label="Actividades" value="activities" onClick={setPage} isActive={page === "activities"} currentPage={page} />
             <NavItem icon={Mail} label="Contacto" value="contact" onClick={setPage} isActive={page === "contact"} currentPage={page} />
+            <NavItem icon={ImageIcon} label="Galería" value="gallery" onClick={setPage} isActive={page === "gallery"} currentPage={page} />
           </nav>
         </div>
       </header>
 
       {/* CONTENT */}
-      <main className="p-8 max-w-6xl mx-auto">
-        {page === "home" && <HomePage setPage={setPage} />}
-        {page === "about" && <About />}
-        {page === "activities" && <Activities />}
-        {page === "contact" && <Contact />}
-      </main>
+      {page !== "gallery" && (
+        <main className="p-8 max-w-6xl mx-auto">
+          {page === "home" && <HomePage setPage={setPage} />}
+          {page === "about" && <About />}
+          {page === "activities" && <Activities />}
+          {page === "contact" && <Contact />}
+        </main>
+      )}
       {/* Galería a pantalla completa */}
-      <section className="w-full bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 py-16">
-        <h2 className="text-4xl font-bold mb-10 text-center text-white">Galería</h2>
-        <GalleryCarousel />
-      </section>
+      {page === "gallery" && (
+        <section className="w-full min-h-[80vh] bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 py-16">
+          <h2 className="text-4xl font-bold mb-10 text-center text-white">Galería</h2>
+          <GalleryCarousel />
+        </section>
+      )}
     </div>
   );
 }
