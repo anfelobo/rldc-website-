@@ -115,7 +115,7 @@ function Activities() {
             <div className="flex items-start gap-4">
               <div className="text-4xl mb-4">{event.icon}</div>
               <div className="flex-1">
-                <h2 className="text-2xl font-bold mb-2 text-blue-300">{event.title}</h2>
+                <h2 className="text-2xl font-bold mb-2 text-white">{event.title}</h2>
                 <p className="text-purple-300 font-medium mb-3">{event.date}</p>
                 <p className="text-gray-300 leading-relaxed">{event.description}</p>
                 {event.link && (
