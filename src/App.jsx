@@ -14,7 +14,7 @@ const NavItem = ({ icon: IconComponent, label, value, onClick, isActive }) => ( 
     }`}
   >
     <IconComponent size={18} className="md:w-5 md:h-5" />
-    <span className="hidden md:inline">{label}</span>
+    <span className="opacity-0 md:opacity-100 md:inline-block">{label}</span>
   </button>
 );
 
