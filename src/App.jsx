@@ -54,7 +54,7 @@ function Activities() {
       date: "Marzo 2026",
       description: "Únete al festival astronómico más importante de Colombia. Observaciones nocturnas, charlas con expertos y actividades para toda la familia.",
       icon: "🎭",
-      link: "https://festivalvillaastronomia.com"
+      link: "https://festivaldeastronomia.com"
     },
     {
       title: "Observación Lunar",
