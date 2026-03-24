@@ -3,6 +3,8 @@ import { useEffect, useRef, useState } from "react";
 
 function GalleryCarousel() {
   const images = [
+    "/galeria/grupo.jpeg",
+    "/galeria/grupo2.jpeg",
     "/galeria/04.JPG",
     "/galeria/05.JPG",
     "/galeria/06.JPG",
@@ -10,9 +12,8 @@ function GalleryCarousel() {
     "/galeria/11.png",
     "/galeria/12.png",
     "/galeria/10.png",
-    "/galeria/09.png",
-    "/galeria/grupo.jpeg",
-    "/galeria/09.jpeg"
+    "/galeria/09.png"
+  
 
   ];
   const [current, setCurrent] = useState(0);
