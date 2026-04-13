@@ -454,7 +454,13 @@ function HomePage({ setPage }) {
 
 function About() {
   const teamMembers = [
-   
+       {
+      name: "Semillero Ceres",
+      role: "Grupo de Astronomía",
+      photo: "/divulgadores/@semillero_ceres.png",
+      description: "Dedicada  al asesoramiento, investigación y divulgación de proyectos científicos, promoviendo el conocimiento, la innovación y el desarrollo en distintos campos de la ciencia.Semillero dedicado al estudio de asteroides y cuerpos menores del sistema solar. Investigamos el asteroide Ceres y otros objetos.",
+      instagram: "@semillero_ceres"
+    },
     {
       name: "Semillero Tejedores",
       role: "Grupo de Investigación Juvenil",
@@ -476,13 +482,6 @@ function About() {
       description: "Cuenta dedicada a la divulgación cíentifica, comparte curiosidades, conocimientos, recomendaciones y noticias;   enfocada principalmente en astronomia, exploración espacial física y astrofísica. Esto con el fin de acercar la ciencia a personas de todas las edades.",
       instagram: "@s_spacefan"
     },
-        {
-      name: "Anfelobo",
-      role: "Divulgador Científico",
-      photo: "/divulgadores/@anfelobo.png",
-      description: "Divulgador de ciencia apasionado por la astronomía y la naturaleza. Busco transformar la curiosidad en conocimiento y acercar el universo a las personas, creando puentes entre la ciencia, la Tierra y nuestra forma de habitarla",
-      instagram: "@anfelobo"
-    },
     {
       name: "Turismo hacia las Estrellas",
       role: "Guía Astronómico Turístico",
@@ -490,14 +489,28 @@ function About() {
       description: "Es una agencia de viajes que promueve  la divulgación científica a través de experiencias como el Astroturismo y también lleva a cabo actividades de apropiación Cultural, de Naturaleza, Bienestar y Deportivo.",
       instagram: "@turismohacialasestrellas"
     },
-      {
+
+         {
       name: "Shaula Grupo Bioastronomía",
       role: "Grupo de Investigación Bioastronómica",
       photo: "/divulgadores/@shaulagrupobioastronomia.png",
       description: "Grupo dedicado al estudio de la vida en el universo. Realizamos investigaciones sobre exoplanetas habitables y la búsqueda de vida extraterrestre.",
       instagram: "@shaulagrupobioastronomia"
     },
-
+    {
+      name: "Anfelobo",
+      role: "Divulgador Científico",
+      photo: "/divulgadores/@anfelobo.png",
+      description: "Divulgador de ciencia apasionado por la astronomía y la naturaleza. Busco transformar la curiosidad en conocimiento y acercar el universo a las personas, creando puentes entre la ciencia, la Tierra y nuestra forma de habitarla",
+      instagram: "@anfelobo"
+    },
+        {
+      name: "Revista Petroglifos",
+      role: "Publicación Científica",
+      photo: "/divulgadores/@revistapetroglifos.png",
+      description: "Es una revista científica indexada y arbitrada de la Fundación GIFET. Con un enfoque de publicación continua y revisión por pares, difunde y divulga investigaciones transdisciplinares sobre realidades socioculturales, educativas, agroproductivas y tecnológicas para investigadores y profesionales de América Latina y el Caribe.",
+      instagram: "@revistapetroglifos"
+    },
     {
       name: "Museo del Vidrio de Bogotá",
       role: "Institución Cultural Científica",
@@ -525,14 +538,14 @@ function About() {
       photo: "/divulgadores/@cefeidas.bdi.png",
       description: "Grupo de divulgación científica enfocado en inspirar, educar y empoderar a niñas, jóvenes y mujeres en el ámbito de la ciencia. Buscamos acercar la ciencia a diversos territorios y contextos, promoviendo la curiosidad, el pensamiento crítico y la construcción de referentes.Grupo dedicado al estudio de estrellas variables Cefeidas. Usamos estos 'candiles cósmicos' para medir distancias en el universo.",
       instagram: "@cefeidas.bdi"
-    },
+    },/*
     {
       name: "Alexander Urzola",
       role: "Divulgador Científico",
       photo: "/divulgadores/@alexanderurzola.png",
       description: "Especialista en neurociencia y psicología. Comparto conocimientos sobre el funcionamiento del cerebro humano.",
       instagram: "@alexanderurzola"
-    },
+    },*/
     {
       name: "Planetario Cosmo",
       role: "Centro de Divulgación Astronómica",
@@ -561,13 +574,7 @@ function About() {
       description: "Astronomízate es un proyecto de comunicación y divulgación de la ciencia, principalmente de la Astronomía. Realizamos nuestra labor a través de redes sociales y plataformas de contenido multimedia. Así como también a través de actividades presenciales y virtuales donde se imparten talleres, conferencias, cursos, asesorías y observaciones con telescopio.",
       instagram: "@astronomizate_oficial"
     },
-    {
-      name: "Revista Petroglifos",
-      role: "Publicación Científica",
-      photo: "/divulgadores/@revistapetroglifos.png",
-      description: "Es una revista científica indexada y arbitrada de la Fundación GIFET. Con un enfoque de publicación continua y revisión por pares, difunde y divulga investigaciones transdisciplinares sobre realidades socioculturales, educativas, agroproductivas y tecnológicas para investigadores y profesionales de América Latina y el Caribe.",
-      instagram: "@revistapetroglifos"
-    },
+
     {
       name: "Grupo Astro Wow",
       role: "Divulgadores Astronómicos",
@@ -578,7 +585,7 @@ function About() {
     {
       name: "Gaute de Astronomía",
       role: "Divulgador Astronómico",
-      photo: "/divulgadores/@gauteovanastronomia.png",
+      photo: "/divulgadores/@Gauteovan.png",
       description: "Grupo de Aficionados de Santa Marta Colombia,  dedicados a la divulgación científica.",
       instagram: "@gauteovanastronomia"
     },
