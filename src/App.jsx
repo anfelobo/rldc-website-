@@ -583,7 +583,7 @@ function About() {
       instagram: "@grupoastrowow"
     },
     {
-      name: "Gaute de Astronomía",
+      name: "GAUTEOVAN de Astronomía",
       role: "Divulgador Astronómico",
       photo: "/divulgadores/@Gauteovan.png",
       description: "Grupo de Aficionados de Santa Marta Colombia,  dedicados a la divulgación científica.",
