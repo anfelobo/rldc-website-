@@ -454,20 +454,7 @@ function HomePage({ setPage }) {
 
 function About() {
   const teamMembers = [
-    {
-      name: "Shaula Grupo Bioastronomía",
-      role: "Grupo de Investigación Bioastronómica",
-      photo: "/divulgadores/@shaulagrupobioastronomia.png",
-      description: "Grupo dedicado al estudio de la vida en el universo. Realizamos investigaciones sobre exoplanetas habitables y la búsqueda de vida extraterrestre.",
-      instagram: "@shaulagrupobioastronomia"
-    },
-    {
-      name: "Proyecto Constelación",
-      role: "Iniciativa Educativa Astronómica",
-      photo: "/divulgadores/@proyecto_constelacion_.png",
-      description: "Proyecto que conecta estudiantes con el cielo nocturno. Organizamos observaciones astronómicas y talleres de astronomía básica.",
-      instagram: "@proyecto_constelacion_"
-    },
+   
     {
       name: "Semillero Tejedores",
       role: "Grupo de Investigación Juvenil",
@@ -476,33 +463,41 @@ function About() {
       instagram: "@semillero_tejedores"
     },
     {
+      name: "Proyecto Constelación",
+      role: "Iniciativa Educativa Astronómica",
+      photo: "/divulgadores/@proyecto_constelacion_.png",
+      description: "Somos una cuenta de divulgación que crea contenido para que las ciencias astronómicas sean más visibles y mucho más fáciles de entender. Además, apoyamos el trabajo de las mujeres en la ciencia y visibilizamos su labor; realizamos publicaciones, talleres y charlas relacionadas con esta temática.",
+      instagram: "@proyecto_constelacion_"
+    },
+    {
       name: "Space Fan",
       role: "Divulgador Espacial",
       photo: "/divulgadores/@s_spacefan.png",
-      description: "Apasionado por el espacio y la exploración espacial. Comparto noticias, curiosidades y conocimientos sobre el universo.",
+      description: "Cuenta dedicada a la divulgación cíentifica, comparte curiosidades, conocimientos, recomendaciones y noticias;   enfocada principalmente en astronomia, exploración espacial física y astrofísica. Esto con el fin de acercar la ciencia a personas de todas las edades.",
       instagram: "@s_spacefan"
+    },
+        {
+      name: "Anfelobo",
+      role: "Divulgador Científico",
+      photo: "/divulgadores/@anfelobo.png",
+      description: "Divulgador de ciencia apasionado por la astronomía y la naturaleza. Busco transformar la curiosidad en conocimiento y acercar el universo a las personas, creando puentes entre la ciencia, la Tierra y nuestra forma de habitarla",
+      instagram: "@anfelobo"
     },
     {
       name: "Turismo hacia las Estrellas",
       role: "Guía Astronómico Turístico",
       photo: "/divulgadores/@turismohacialasestrellas.png",
-      description: "Especialistas en turismo astronómico. Organizamos viajes a lugares con cielos oscuros y experiencias de observación únicas.",
+      description: "Es una agencia de viajes que promueve  la divulgación científica a través de experiencias como el Astroturismo y también lleva a cabo actividades de apropiación Cultural, de Naturaleza, Bienestar y Deportivo.",
       instagram: "@turismohacialasestrellas"
     },
-    {
-      name: "Semillero Ceres",
-      role: "Grupo de Astronomía",
-      photo: "/divulgadores/@semillero_ceres.png",
-      description: "Semillero dedicado al estudio de asteroides y cuerpos menores del sistema solar. Investigamos el asteroide Ceres y otros objetos.",
-      instagram: "@semillero_ceres"
+      {
+      name: "Shaula Grupo Bioastronomía",
+      role: "Grupo de Investigación Bioastronómica",
+      photo: "/divulgadores/@shaulagrupobioastronomia.png",
+      description: "Grupo dedicado al estudio de la vida en el universo. Realizamos investigaciones sobre exoplanetas habitables y la búsqueda de vida extraterrestre.",
+      instagram: "@shaulagrupobioastronomia"
     },
-    {
-      name: "Anfelobo",
-      role: "Divulgador Científico",
-      photo: "/divulgadores/@anfelobo.png",
-      description: "Divulgador científico, amante de la naturaleza y sus maravillas.",
-      instagram: "@anfelobo"
-    },
+
     {
       name: "Museo del Vidrio de Bogotá",
       role: "Institución Cultural Científica",
@@ -514,7 +509,7 @@ function About() {
       name: "Arka Vitae",
       role: "Grupo de Paleontología",
       photo: "/divulgadores/@arkavitae.png",
-      description: "Especialistas en paleontología y evolución. Estudiamos fósiles y la historia de la vida en la Tierra.",
+      description: "Enfocada en biología y naturaleza, compartiendo contenido educativo, visual y accesible sobre biodiversidad, evolución y ciencia, acercando el conocimiento al público general de forma clara y atractiva.",
       instagram: "@arkavitae"
     },
     {
@@ -528,7 +523,7 @@ function About() {
       name: "Cefeidas BDI",
       role: "Grupo de Astronomía Estelar",
       photo: "/divulgadores/@cefeidas.bdi.png",
-      description: "Grupo dedicado al estudio de estrellas variables Cefeidas. Usamos estos 'candiles cósmicos' para medir distancias en el universo.",
+      description: "Grupo de divulgación científica enfocado en inspirar, educar y empoderar a niñas, jóvenes y mujeres en el ámbito de la ciencia. Buscamos acercar la ciencia a diversos territorios y contextos, promoviendo la curiosidad, el pensamiento crítico y la construcción de referentes.Grupo dedicado al estudio de estrellas variables Cefeidas. Usamos estos 'candiles cósmicos' para medir distancias en el universo.",
       instagram: "@cefeidas.bdi"
     },
     {
@@ -549,7 +544,7 @@ function About() {
       name: "Sci Cousins",
       role: "Divulgadores Familiares",
       photo: "/divulgadores/@scicousins.png",
-      description: "Hermanos dedicados a la divulgación científica familiar. Creamos contenido educativo divertido para todas las edades.",
+      description: "Compartimos contenido científico, avances, curiosidades y nuestras experiencias, porque la ciencia es de todos y para todos!Hermanos dedicados a la divulgación científica familiar. Creamos contenido educativo divertido para todas las edades.",
       instagram: "@scicousins"
     },
     {
@@ -563,14 +558,14 @@ function About() {
       name: "Astronomízate",
       role: "Plataforma de Divulgación Astronómica",
       photo: "/divulgadores/@astronomizate_oficial.png",
-      description: "Plataforma dedicada a popularizar la astronomía. Ofrecemos cursos, talleres y contenido educativo sobre el universo.",
+      description: "Astronomízate es un proyecto de comunicación y divulgación de la ciencia, principalmente de la Astronomía. Realizamos nuestra labor a través de redes sociales y plataformas de contenido multimedia. Así como también a través de actividades presenciales y virtuales donde se imparten talleres, conferencias, cursos, asesorías y observaciones con telescopio.",
       instagram: "@astronomizate_oficial"
     },
     {
       name: "Revista Petroglifos",
       role: "Publicación Científica",
       photo: "/divulgadores/@revistapetroglifos.png",
-      description: "Revista especializada en arqueoastronomía y petroglifos. Exploramos la relación entre antiguas culturas y el cielo.",
+      description: "Es una revista científica indexada y arbitrada de la Fundación GIFET. Con un enfoque de publicación continua y revisión por pares, difunde y divulga investigaciones transdisciplinares sobre realidades socioculturales, educativas, agroproductivas y tecnológicas para investigadores y profesionales de América Latina y el Caribe.",
       instagram: "@revistapetroglifos"
     },
     {
@@ -584,15 +579,36 @@ function About() {
       name: "Gaute de Astronomía",
       role: "Divulgador Astronómico",
       photo: "/divulgadores/@gauteovanastronomia.png",
-      description: "Especialista en astronomía con enfoque en la divulgación. Comparto conocimientos sobre el universo de manera clara y apasionada.",
+      description: "Grupo de Aficionados de Santa Marta Colombia,  dedicados a la divulgación científica.",
       instagram: "@gauteovanastronomia"
     },
     {
       name: "El Microscopio Podcast",
       role: "Podcast Científico",
       photo: "/divulgadores/@el_microscopio_podcast.png",
-      description: "Podcast dedicado a explorar el mundo microscópico. Hablamos de biología celular, microbiología y ciencia molecular.",
+      description: "Pódcast de divulgación científica creado para acercar a los niños, niñas y niñes entre 5 y 12 años y a sus familias a la ciencia.",
       instagram: "@el_microscopio_podcast"
+    },
+       {
+      name: "Restrepolito",
+      role: "Divulgador",
+      photo: "/divulgadores/@restrepolito_.png",
+      description: "El contenido que comparto es sobre geología, explicando conceptos, fenómenos, temas, o acontecimientos de actualidad que en esencia pueden ser complejos en términos técnicos de una manera sencilla, con el fin de expandir el conocimientos de estos mientras le doy visibilidad a la geología como ciencia.",
+      instagram: "@restrepolito_"
+    },
+           {
+      name: "Biología con Brandon",
+      role: "Divulgador",
+      photo: "/divulgadores/@biologiaconbrandon_.png",
+      description: "Es una cuenta de Instagram dedicada a la difusión y divulgación de las ciencias biológicas, desde su nivel molecular hasta las complejas interacciones poblacionales y evolución. Nace de un intento de complementar la literatura de divulgación con contenido digital para buscar que más personas se interesen por leer temas biológicos. Busco dar a conocer temáticas poco conocidas, de vanguardia y con relevancia para acercar la biologia a estudiantes de Secundaria, Bachiller y Pregrado. ",
+      instagram: "@biologiaconbrandon_"
+    },
+           {
+      name: "Astronona de Confianza",
+      role: "Divulgador",
+      photo: "/divulgadores/@astronona_deconfianza.png",
+      description: "Dedicada a la  divulgación y pedagogía en ciencias del universo para aquellos que estén interesados en empezar y aprender sobre este campo de conocimiento.",
+      instagram: "@astronona_deconfianza"
     }
   ];
 
