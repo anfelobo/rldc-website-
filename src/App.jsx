@@ -583,7 +583,7 @@ function About() {
       instagram: "@grupoastrowow"
     },
     {
-      name: "GAUTEOVAN de Astronomía",
+      name: "Gauteovan de Astronomía",
       role: "Divulgador Astronómico",
       photo: "/divulgadores/@Gauteovan.png",
       description: "Grupo de Aficionados de Santa Marta Colombia,  dedicados a la divulgación científica.",
@@ -611,7 +611,7 @@ function About() {
       instagram: "@biologiaconbrandon_"
     },
            {
-      name: "Astronona de Confianza",
+      name: "Astroñoña de Confianza",
       role: "Divulgador",
       photo: "/divulgadores/@astronona_deconfianza.png",
       description: "Dedicada a la  divulgación y pedagogía en ciencias del universo para aquellos que estén interesados en empezar y aprender sobre este campo de conocimiento.",
