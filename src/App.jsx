@@ -616,6 +616,13 @@ function About() {
       photo: "/divulgadores/@astronona_deconfianza.png",
       description: "Dedicada a la  divulgación y pedagogía en ciencias del universo para aquellos que estén interesados en empezar y aprender sobre este campo de conocimiento.",
       instagram: "@astronona_deconfianza"
+    },
+           {
+      name: "Capítulos PIEEAFIT",
+      role: "Grupo estudiantil",
+      photo: "/divulgadores/@capitulospieeafit.png",
+      description: "Grupo estudiantil que promueve, divulga y fortalece el conocimiento científico, con énfasis en el fascinante mundo de la óptica y la fotónica",
+      instagram: "@capitulospieeafit"
     }
   ];
 
