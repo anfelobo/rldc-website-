@@ -601,14 +601,14 @@ function About() {
        {
       name: "Restrepolito",
       role: "Divulgador cientifico",
-      photo: "/divulgadores/@restrepolito_.png",
+      photo: "/divulgadores/logo_red_circular.png",
       description: "El contenido que comparto es sobre geología, explicando conceptos, fenómenos, temas, o acontecimientos de actualidad que en esencia pueden ser complejos en términos técnicos de una manera sencilla, con el fin de expandir el conocimientos de estos mientras le doy visibilidad a la geología como ciencia.",
       instagram: "@restrepolito_"
     },
            {
       name: "Biología con Brandon",
       role: "Divulgador cientifico",
-      photo: "/divulgadores/@biologiaconbrandon_.png",
+      photo: "/divulgadores/logo_red_circular.png",
       description: "Es una cuenta de Instagram dedicada a la difusión y divulgación de las ciencias biológicas, desde su nivel molecular hasta las complejas interacciones poblacionales y evolución. Nace de un intento de complementar la literatura de divulgación con contenido digital para buscar que más personas se interesen por leer temas biológicos. Busco dar a conocer temáticas poco conocidas, de vanguardia y con relevancia para acercar la biologia a estudiantes de Secundaria, Bachiller y Pregrado. ",
       instagram: "@biologiaconbrandon_"
     },
