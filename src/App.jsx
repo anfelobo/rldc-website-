@@ -629,21 +629,21 @@ function About() {
            {
       name: "Genesitamedialuna",
       role: "Divulgador cientifico",
-      photo: "/divulgadores/@genesitamedialuna.png",
+      photo: "/divulgadores/logo_red_circular.png",
       description: "Pendiente",
       instagram: "@genesitamedialuna"
     }    ,
            {
       name: "Cienciatropical",
       role: "Divulgador cientifico",
-      photo: "/divulgadores/@cienciatropical.png",
+      photo: "/divulgadores/logo_red_circular.png",
       description: "Pendiente",
       instagram: "@cienciatropical"
     }       ,
            {
       name: "Alejandra Villalvazo",
       role: "Divulgador cientifico",
-      photo: "/divulgadores/@avlvppr.png",
+      photo: "/divulgadores/logo_red_circular.png",
       description: "Pendiente",
       instagram: "@avlvppr"
     }
