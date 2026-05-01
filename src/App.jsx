@@ -723,7 +723,21 @@ function Mapa() {
       position: [-1.831239, -78.183406],
       description: "1 divulgador científico",
       color: "#f59e0b"
-    }
+    }, 
+    {
+      country: "Guatemala",
+      count: 1,
+      position: [15.7835, -90.2308],
+      description: "1 divulgador científico",
+      color: "#8b5cf6"
+    },
+      {
+      country: "Venezuela",
+      count: 1,
+      position: [6.4238, -66.5897],
+      description: "1 divulgador científico",
+      color: "#ec4899"
+    },
     /*
     {
       country: "Estados Unidos",
@@ -745,14 +759,7 @@ function Mapa() {
       position: [17.1899, -88.4976],
       description: "0 divulgadores científicos",
       color: "#a855f7"
-    },
-    {
-      country: "Guatemala",
-      count: 1,
-      position: [15.7835, -90.2308],
-      description: "1 divulgador científico",
-      color: "#8b5cf6"
-    },
+    },   
     {
       country: "El Salvador",
       count: 0,
@@ -879,13 +886,7 @@ function Mapa() {
       description: "0 divulgadores científicos",
       color: "#8b5cf6"
     },
-    {
-      country: "Venezuela",
-      count: 1,
-      position: [6.4238, -66.5897],
-      description: "1 divulgador científico",
-      color: "#ec4899"
-    },
+  
   
     {
       country: "Perú",
