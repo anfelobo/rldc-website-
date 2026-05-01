@@ -601,14 +601,14 @@ function About() {
        {
       name: "Restrepolito",
       role: "Divulgador cientifico",
-      photo: "",
+      photo: "/divulgadores/@logo_vacio.png",
       description: "El contenido que comparto es sobre geología, explicando conceptos, fenómenos, temas, o acontecimientos de actualidad que en esencia pueden ser complejos en términos técnicos de una manera sencilla, con el fin de expandir el conocimientos de estos mientras le doy visibilidad a la geología como ciencia.",
       instagram: "@restrepolito_"
     },
            {
       name: "Biología con Brandon",
       role: "Divulgador cientifico",
-      photo: "",
+      photo: "/divulgadores/@logo_vacio.png",
       description: "Es una cuenta de Instagram dedicada a la difusión y divulgación de las ciencias biológicas, desde su nivel molecular hasta las complejas interacciones poblacionales y evolución. Nace de un intento de complementar la literatura de divulgación con contenido digital para buscar que más personas se interesen por leer temas biológicos. Busco dar a conocer temáticas poco conocidas, de vanguardia y con relevancia para acercar la biologia a estudiantes de Secundaria, Bachiller y Pregrado. ",
       instagram: "@biologiaconbrandon_"
     },
@@ -629,21 +629,21 @@ function About() {
            {
       name: "Genesitamedialuna",
       role: "Divulgador cientifico",
-      photo: "",
+      photo: "/divulgadores/@logo_vacio.png",
       description: "Divulgadora cientifica con datos curiosos, recursos y explicaciones accesibles sobre biotecnología. También comparto contenido de humor y experiencias reales sobre la vida en el laboratorio y mi trayectoria como estudiante del área STEM",
       instagram: "@genesitamedialuna"
     }    ,
            {
       name: "Cienciatropical",
       role: "Divulgador cientifico",
-      photo: "",
+      photo: "/divulgadores/@logo_vacio.png",
       description: "Pendiente",
       instagram: "@cienciatropical"
     }       ,
            {
       name: "Alejandra Villalvazo",
       role: "Divulgador cientifico",
-      photo: "",
+      photo: "/divulgadores/@logo_vacio.png",
       description: "Dedicada a la  divulgación y pedagogía en ciencias del universo para aquellos que estén interesados en empezar y aprender sobre este campo de conocimiento.",
       instagram: "@avlvppr"
     }
