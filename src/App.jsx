@@ -185,34 +185,36 @@ function Activities() {
       icon: "🎭",
       link: "https://festivaldeastronomia.com"
     },
+     {
+      title: "CISMA CONGRESO INTERNACIONAL DE STEAM Y METODOGIAS ACTIVAS",
+      date: "Noviembre 2026",
+      description: "Prepárate para vivir una experiencia transformadora con ponencias de alto impacto, talleres exclusivos y una comunidad vibrante que está cambiando el mundo.",
+      icon: "⚛️",
+      link: "https://www.instagram.com/cismasteamm"
+    },
   {
       title: "NASA Space Apps Challenge",
-      date: "Junio 2026",
+      date: "Octubre 2026",
       description: "Participa en el hackathon global de NASA Space Apps. Resuelve problemas reales del espacio con datos de la NASA y crea soluciones innovadoras.",
       icon: "🚀",
       link: "https://www.spaceappschallenge.org/"
     },
     {
-      title: "Observación Lunar",
-      date: "Abril 2026",
-      description: "Únete a nuestra sesión de observación astronómica para admirar la Luna y aprender sobre sus fases y características.",
+      title: "SEMANA DEL CEREBRO",
+      date: "Marzo 2026",
+      description: "La Semana del Cerebro Colombia fue mucho más que actividades: fue encuentro, curiosidad, preguntas que nos movieron por dentro y personas increíbles dejando huella en cada espacio.",
       icon: "🌙",
-      link: "https://tusitio.com/fisica-cuantica"
+      link: "https://www.instagram.com/baw_colombia?igsh=MXNlajI4YmZ5NjduaA%3D%3D"
     },
     {
-      title: "Charla de Astrofotografía",
-      date: "Mayo 2026",
+      title: "Aula bajo las estrellas",
+      date: "Agosto 2026",
       description: "Descubre los secretos de la fotografía astronómica con expertos que compartirán técnicas y equipo necesario.",
-      icon: "📸",
-      link: "https://tusitio.com/fisica-cuantica"
+      icon: "🌙",
+      /*icon: "📸",*/
+      link: "https://rac.net.co/nuevositio/aula-bajo-las-estrellas-2026/"
     },
-    {
-      title: "Taller de Física Cuántica",
-      date: "Junio 2026",
-      description: "Explora los fundamentos de la mecánica cuántica a través de experimentos interactivos y demostraciones.",
-      icon: "⚛️",
-      link: "https://tusitio.com/fisica-cuantica"
-    },
+   
     {
       title: "Noche de las Estrellas",
       date: "Julio 2026",
@@ -456,28 +458,28 @@ function About() {
   const teamMembers = [
        {
       name: "Semillero Ceres",
-      role: "Grupo de Astronomía",
+      role: "Semillero de investigación",
       photo: "/divulgadores/@semillero_ceres.png",
       description: "Dedicada  al asesoramiento, investigación y divulgación de proyectos científicos, promoviendo el conocimiento, la innovación y el desarrollo en distintos campos de la ciencia.Semillero dedicado al estudio de asteroides y cuerpos menores del sistema solar. Investigamos el asteroide Ceres y otros objetos.",
       instagram: "@semillero_ceres"
     },
     {
       name: "Semillero Tejedores",
-      role: "Grupo de Investigación Juvenil",
+      role: "Semillero de investigación",
       photo: "/divulgadores/@semillero_tejedores.png",
       description: "Semillero de investigación que forma jóvenes científicos. Nos enfocamos en proyectos interdisciplinarios de ciencia y tecnología.",
       instagram: "@semillero_tejedores"
     },
     {
       name: "Proyecto Constelación",
-      role: "Iniciativa Educativa Astronómica",
+      role: "Divulgador cientifico",
       photo: "/divulgadores/@proyecto_constelacion_.png",
       description: "Somos una cuenta de divulgación que crea contenido para que las ciencias astronómicas sean más visibles y mucho más fáciles de entender. Además, apoyamos el trabajo de las mujeres en la ciencia y visibilizamos su labor; realizamos publicaciones, talleres y charlas relacionadas con esta temática.",
       instagram: "@proyecto_constelacion_"
     },
     {
       name: "Space Fan",
-      role: "Divulgador Espacial",
+      role: "Divulgador cientifico",
       photo: "/divulgadores/@s_spacefan.png",
       description: "Cuenta dedicada a la divulgación cíentifica, comparte curiosidades, conocimientos, recomendaciones y noticias;   enfocada principalmente en astronomia, exploración espacial física y astrofísica. Esto con el fin de acercar la ciencia a personas de todas las edades.",
       instagram: "@s_spacefan"
@@ -492,7 +494,7 @@ function About() {
 
          {
       name: "Shaula Grupo Bioastronomía",
-      role: "Grupo de Investigación Bioastronómica",
+      role: "Divulgador cientifico",
       photo: "/divulgadores/@shaulagrupobioastronomia.png",
       description: "Grupo dedicado al estudio de la vida en el universo. Realizamos investigaciones sobre exoplanetas habitables y la búsqueda de vida extraterrestre.",
       instagram: "@shaulagrupobioastronomia"
@@ -506,7 +508,7 @@ function About() {
     },
         {
       name: "Revista Petroglifos",
-      role: "Publicación Científica",
+      role: "Revista Cientifica",
       photo: "/divulgadores/@revistapetroglifos.png",
       description: "Es una revista científica indexada y arbitrada de la Fundación GIFET. Con un enfoque de publicación continua y revisión por pares, difunde y divulga investigaciones transdisciplinares sobre realidades socioculturales, educativas, agroproductivas y tecnológicas para investigadores y profesionales de América Latina y el Caribe.",
       instagram: "@revistapetroglifos"
@@ -520,7 +522,7 @@ function About() {
     },
     {
       name: "Arka Vitae",
-      role: "Grupo de Paleontología",
+      role: "Divulgador cientifico",
       photo: "/divulgadores/@arkavitae.png",
       description: "Enfocada en biología y naturaleza, compartiendo contenido educativo, visual y accesible sobre biodiversidad, evolución y ciencia, acercando el conocimiento al público general de forma clara y atractiva.",
       instagram: "@arkavitae"
@@ -534,7 +536,7 @@ function About() {
     },
     {
       name: "Cefeidas BDI",
-      role: "Grupo de Astronomía Estelar",
+      role: "Divulgador cientifico",
       photo: "/divulgadores/@cefeidas.bdi.png",
       description: "Grupo de divulgación científica enfocado en inspirar, educar y empoderar a niñas, jóvenes y mujeres en el ámbito de la ciencia. Buscamos acercar la ciencia a diversos territorios y contextos, promoviendo la curiosidad, el pensamiento crítico y la construcción de referentes.Grupo dedicado al estudio de estrellas variables Cefeidas. Usamos estos 'candiles cósmicos' para medir distancias en el universo.",
       instagram: "@cefeidas.bdi"
@@ -548,28 +550,28 @@ function About() {
     },*/
     {
       name: "Planetario Cosmo",
-      role: "Centro de Divulgación Astronómica",
+      role: "Divulgador cientifico",
       photo: "/divulgadores/@planetario_cosmo.png",
       description: "Planetario dedicado a la educación astronómica. Ofrecemos proyecciones, talleres y charlas sobre el universo.",
       instagram: "@planetario_cosmo"
     },
     {
       name: "Sci Cousins",
-      role: "Divulgadores Familiares",
+      role: "Divulgador cientifico",
       photo: "/divulgadores/@scicousins.png",
       description: "Compartimos contenido científico, avances, curiosidades y nuestras experiencias, porque la ciencia es de todos y para todos!Hermanos dedicados a la divulgación científica familiar. Creamos contenido educativo divertido para todas las edades.",
       instagram: "@scicousins"
     },
     {
       name: "Exploradores de Estrellas",
-      role: "Grupo de Astronomía Juvenil",
+      role: "Divulgador cientifico",
       photo: "/divulgadores/@exploradoresdeestrellas.png",
       description: "Grupo de jóvenes exploradores del universo. Realizamos observaciones, proyectos científicos y actividades educativas.",
       instagram: "@exploradoresdeestrellas"
     },
     {
       name: "Astronomízate",
-      role: "Plataforma de Divulgación Astronómica",
+      role: "Divulgador cientifico",
       photo: "/divulgadores/@astronomizate_oficial.png",
       description: "Astronomízate es un proyecto de comunicación y divulgación de la ciencia, principalmente de la Astronomía. Realizamos nuestra labor a través de redes sociales y plataformas de contenido multimedia. Así como también a través de actividades presenciales y virtuales donde se imparten talleres, conferencias, cursos, asesorías y observaciones con telescopio.",
       instagram: "@astronomizate_oficial"
@@ -577,14 +579,14 @@ function About() {
 
     {
       name: "Grupo Astro Wow",
-      role: "Divulgadores Astronómicos",
+      role: "Divulgador cientifico",
       photo: "/divulgadores/@grupoastrowow.png",
       description: "Equipo apasionado por compartir el 'wow' de la astronomía. Creamos contenido que maravilla y educa sobre el universo.",
       instagram: "@grupoastrowow"
     },
     {
       name: "Gauteovan de Astronomía",
-      role: "Divulgador Astronómico",
+      role: "Divulgador cientifico",
       photo: "/divulgadores/@Gauteovan.png",
       description: "Grupo de Aficionados de Santa Marta Colombia,  dedicados a la divulgación científica.",
       instagram: "@gauteovanastronomia"
@@ -598,21 +600,21 @@ function About() {
     },
        {
       name: "Restrepolito",
-      role: "Divulgador",
+      role: "Divulgador cientifico",
       photo: "/divulgadores/@restrepolito_.png",
       description: "El contenido que comparto es sobre geología, explicando conceptos, fenómenos, temas, o acontecimientos de actualidad que en esencia pueden ser complejos en términos técnicos de una manera sencilla, con el fin de expandir el conocimientos de estos mientras le doy visibilidad a la geología como ciencia.",
       instagram: "@restrepolito_"
     },
            {
       name: "Biología con Brandon",
-      role: "Divulgador",
+      role: "Divulgador cientifico",
       photo: "/divulgadores/@biologiaconbrandon_.png",
       description: "Es una cuenta de Instagram dedicada a la difusión y divulgación de las ciencias biológicas, desde su nivel molecular hasta las complejas interacciones poblacionales y evolución. Nace de un intento de complementar la literatura de divulgación con contenido digital para buscar que más personas se interesen por leer temas biológicos. Busco dar a conocer temáticas poco conocidas, de vanguardia y con relevancia para acercar la biologia a estudiantes de Secundaria, Bachiller y Pregrado. ",
       instagram: "@biologiaconbrandon_"
     },
            {
       name: "Astroñoña de Confianza",
-      role: "Divulgador",
+      role: "Divulgador cientifico",
       photo: "/divulgadores/@astronona_deconfianza.png",
       description: "Dedicada a la  divulgación y pedagogía en ciencias del universo para aquellos que estén interesados en empezar y aprender sobre este campo de conocimiento.",
       instagram: "@astronona_deconfianza"
@@ -623,6 +625,27 @@ function About() {
       photo: "/divulgadores/@capitulospieeafit.png",
       description: "Grupo estudiantil que promueve, divulga y fortalece el conocimiento científico, con énfasis en el fascinante mundo de la óptica y la fotónica",
       instagram: "@capitulospieeafit"
+    }    ,
+           {
+      name: "Genesitamedialuna",
+      role: "Divulgador cientifico",
+      photo: "/divulgadores/@genesitamedialuna.png",
+      description: "Pendiente",
+      instagram: "@genesitamedialuna"
+    }    ,
+           {
+      name: "Cienciatropical",
+      role: "Divulgador cientifico",
+      photo: "/divulgadores/@cienciatropical.png",
+      description: "Pendiente",
+      instagram: "@cienciatropical"
+    }       ,
+           {
+      name: "Alejandra Villalvazo",
+      role: "Divulgador cientifico",
+      photo: "/divulgadores/@avlvppr.png",
+      description: "Pendiente",
+      instagram: "@avlvppr"
     }
   ];
 
@@ -682,32 +705,252 @@ function Mapa() {
   const locations = [
     {
       country: "Colombia",
-      count: 17,
+      count: 18,
       position: [4.5709, -74.2973],
-      description: "17 divulgadores científicos",
+      description: "18 divulgadores científicos",
       color: "#10b981" // Emerald
     },
     {
       country: "México",
-      count: 2,
+      count: 4,
       position: [23.6345, -102.5528],
-      description: "2 divulgadores científicos",
+      description: "4 divulgadores científicos",
       color: "#3b82f6" // Blue
+    },
+      {
+      country: "Ecuador",
+      count: 1,
+      position: [-1.831239, -78.183406],
+      description: "1 divulgador científico",
+      color: "#f59e0b"
+    }
+    /*
+    {
+      country: "Estados Unidos",
+      count: 0,
+      position: [37.0902, -95.7129],
+      description: "0 divulgadores científicos",
+      color: "#f97316"
+    },
+    {
+      country: "Canadá",
+      count: 0,
+      position: [56.1304, -106.3468],
+      description: "0 divulgadores científicos",
+      color: "#38bdf8"
+    },
+    {
+      country: "Belice",
+      count: 0,
+      position: [17.1899, -88.4976],
+      description: "0 divulgadores científicos",
+      color: "#a855f7"
     },
     {
       country: "Guatemala",
       count: 1,
       position: [15.7835, -90.2308],
       description: "1 divulgador científico",
-      color: "#8b5cf6" // Purple
+      color: "#8b5cf6"
+    },
+    {
+      country: "El Salvador",
+      count: 0,
+      position: [13.7942, -88.8965],
+      description: "0 divulgadores científicos",
+      color: "#14b8a6"
+    },
+    {
+      country: "Honduras",
+      count: 0,
+      position: [15.199999, -86.241905],
+      description: "0 divulgadores científicos",
+      color: "#22c55e"
+    },
+    {
+      country: "Nicaragua",
+      count: 0,
+      position: [12.865416, -85.207229],
+      description: "0 divulgadores científicos",
+      color: "#0ea5e9"
+    },
+    {
+      country: "Costa Rica",
+      count: 0,
+      position: [9.748917, -83.753428],
+      description: "0 divulgadores científicos",
+      color: "#6366f1"
+    },
+    {
+      country: "Panamá",
+      count: 0,
+      position: [8.537981, -80.782127],
+      description: "0 divulgadores científicos",
+      color: "#f43f5e"
+    },
+    {
+      country: "Cuba",
+      count: 0,
+      position: [21.521757, -77.781167],
+      description: "0 divulgadores científicos",
+      color: "#fb7185"
+    },
+    {
+      country: "República Dominicana",
+      count: 0,
+      position: [18.735693, -70.162651],
+      description: "0 divulgadores científicos",
+      color: "#8b5cf6"
+    },
+    {
+      country: "Haití",
+      count: 0,
+      position: [18.971187, -72.285215],
+      description: "0 divulgadores científicos",
+      color: "#f59e0b"
+    },
+    {
+      country: "Jamaica",
+      count: 0,
+      position: [18.109581, -77.297508],
+      description: "0 divulgadores científicos",
+      color: "#14b8a6"
+    },
+    {
+      country: "Bahamas",
+      count: 0,
+      position: [25.03428, -77.39628],
+      description: "0 divulgadores científicos",
+      color: "#22c55e"
+    },
+    {
+      country: "Barbados",
+      count: 0,
+      position: [13.193887, -59.543198],
+      description: "0 divulgadores científicos",
+      color: "#0ea5e9"
+    },
+    {
+      country: "Trinidad y Tobago",
+      count: 0,
+      position: [10.691803, -61.222503],
+      description: "0 divulgadores científicos",
+      color: "#6366f1"
+    },
+    {
+      country: "Antigua y Barbuda",
+      count: 0,
+      position: [17.060816, -61.796428],
+      description: "0 divulgadores científicos",
+      color: "#fb7185"
+    },
+    {
+      country: "Dominica",
+      count: 0,
+      position: [15.415, -61.371],
+      description: "0 divulgadores científicos",
+      color: "#f97316"
+    },
+    {
+      country: "Santa Lucía",
+      count: 0,
+      position: [13.909444, -60.978893],
+      description: "0 divulgadores científicos",
+      color: "#22c55e"
+    },
+    {
+      country: "San Vicente y las Granadinas",
+      count: 0,
+      position: [12.984305, -61.287228],
+      description: "0 divulgadores científicos",
+      color: "#0ea5e9"
+    },
+    {
+      country: "Granada",
+      count: 0,
+      position: [12.1165, -61.6790],
+      description: "0 divulgadores científicos",
+      color: "#14b8a6"
+    },
+    {
+      country: "San Cristóbal y Nieves",
+      count: 0,
+      position: [17.357822, -62.782998],
+      description: "0 divulgadores científicos",
+      color: "#8b5cf6"
     },
     {
       country: "Venezuela",
       count: 1,
       position: [6.4238, -66.5897],
       description: "1 divulgador científico",
-      color: "#ec4899" // Pink
+      color: "#ec4899"
+    },
+  
+    {
+      country: "Perú",
+      count: 0,
+      position: [-9.189967, -75.015152],
+      description: "0 divulgadores científicos",
+      color: "#fb7185"
+    },
+    {
+      country: "Bolivia",
+      count: 0,
+      position: [-16.290154, -63.588653],
+      description: "0 divulgadores científicos",
+      color: "#0ea5e9"
+    },
+    {
+      country: "Chile",
+      count: 0,
+      position: [-35.675147, -71.542969],
+      description: "0 divulgadores científicos",
+      color: "#22c55e"
+    },
+    {
+      country: "Argentina",
+      count: 0,
+      position: [-38.416097, -63.616672],
+      description: "0 divulgadores científicos",
+      color: "#6366f1"
+    },
+    {
+      country: "Uruguay",
+      count: 0,
+      position: [-32.522779, -55.765835],
+      description: "0 divulgadores científicos",
+      color: "#3b82f6"
+    },
+    {
+      country: "Paraguay",
+      count: 0,
+      position: [-23.442503, -58.443832],
+      description: "0 divulgadores científicos",
+      color: "#8b5cf6"
+    },
+    {
+      country: "Brasil",
+      count: 0,
+      position: [-14.235004, -51.925278],
+      description: "0 divulgadores científicos",
+      color: "#10b981"
+    },
+    {
+      country: "Surinam",
+      count: 0,
+      position: [3.919305, -56.027783],
+      description: "0 divulgadores científicos",
+      color: "#f97316"
+    },
+    {
+      country: "Guyana",
+      count: 0,
+      position: [4.860416, -58.93018],
+      description: "0 divulgadores científicos",
+      color: "#f43f5e"
     }
+    */
   ];
 
   // Posición inicial centrada en América Latina
