@@ -608,8 +608,8 @@ function About() {
            {
       name: "Biología con Brandon",
       role: "Divulgador cientifico",
-      photo: "/divulgadores/@logo_vacio.png",
-      description: "Es una cuenta de Instagram dedicada a la difusión y divulgación de las ciencias biológicas, desde su nivel molecular hasta las complejas interacciones poblacionales y evolución. Nace de un intento de complementar la literatura de divulgación con contenido digital para buscar que más personas se interesen por leer temas biológicos. Busco dar a conocer temáticas poco conocidas, de vanguardia y con relevancia para acercar la biologia a estudiantes de Secundaria, Bachiller y Pregrado. ",
+      photo: "/divulgadores/@biologiaconbrandon_.png",
+      description: "Es una cuenta de Instagram dedicada a la difusión y divulgación de las ciencias biológicas, desde su nivel molecular hasta las complejas interacciones poblacionales y evolución. Nace de un intento de complementar la literatura de divulgación con contenido digital para buscar que más personas se interesen por leer temas biológicos.",
       instagram: "@biologiaconbrandon_"
     },
            {
