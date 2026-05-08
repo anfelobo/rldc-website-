@@ -496,7 +496,7 @@ function About() {
       name: "Shaula Grupo Bioastronomía",
       role: "Divulgador cientifico",
       photo: "/divulgadores/@shaulagrupobioastronomia.png",
-      description: "Grupo dedicado al estudio de la vida en el universo. Realizamos investigaciones sobre exoplanetas habitables y la búsqueda de vida extraterrestre.",
+      description: "Comunidad de aprendizaje intergeneracional integrada por niñas y niños entre los 5 y los 125 años, que integra astronomía, biología y ciencias humanas, promoviendo la lectura, la curiosidad, la conversación y el aprendizaje compartido como formas de acercamiento a las ciencias.",
       instagram: "@shaulagrupobioastronomia"
     },
     {
@@ -603,7 +603,7 @@ function About() {
       role: "Divulgador cientifico",
       photo: "/divulgadores/@logo_vacio.png",
       description: "El contenido que comparto es sobre geología, explicando conceptos, fenómenos, temas, o acontecimientos de actualidad que en esencia pueden ser complejos en términos técnicos de una manera sencilla, con el fin de expandir el conocimientos de estos mientras le doy visibilidad a la geología como ciencia.",
-      instagram: "@restrepolito_"
+      instagram: "@restrepolito__"
     },
            {
       name: "Biología con Brandon",
