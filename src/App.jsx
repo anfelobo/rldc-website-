@@ -599,7 +599,7 @@ function About() {
       instagram: "@el_microscopio_podcast"
     },
        {
-      name: "Restrepolito",
+      name: "Samuel Restrepo",
       role: "Divulgador cientifico",
       photo: "/divulgadores/@logo_vacio.png",
       description: "El contenido que comparto es sobre geología, explicando conceptos, fenómenos, temas, o acontecimientos de actualidad que en esencia pueden ser complejos en términos técnicos de una manera sencilla, con el fin de expandir el conocimientos de estos mientras le doy visibilidad a la geología como ciencia.",
@@ -636,7 +636,7 @@ function About() {
            {
       name: "Cienciatropical",
       role: "Divulgador cientifico",
-      photo: "/divulgadores/@logo_vacio.png",
+      photo: "/divulgadores/@cienciatropical.png",
       description: "Pendiente",
       instagram: "@cienciatropical"
     }       ,
