@@ -605,6 +605,13 @@ function About() {
       description: "El contenido que comparto es sobre geología, explicando conceptos, fenómenos, temas, o acontecimientos de actualidad que en esencia pueden ser complejos en términos técnicos de una manera sencilla, con el fin de expandir el conocimientos de estos mientras le doy visibilidad a la geología como ciencia.",
       instagram: "@restrepolito__"
     },
+       {
+      name: "Macientifica",
+      role: "Divulgadora cientifica",
+      photo: "/divulgadores/@macientifica.png",
+      description: "Descripción: Microbiologa y mamá, me gusta divulgar ciencia accesible sobre los microorganismos que nos rodean, desde el pan hasta las enfermedades.",
+      instagram: "@macientifica"
+    },
            {
       name: "Biología con Brandon",
       role: "Divulgador cientifico",
@@ -705,7 +712,7 @@ function Mapa() {
   const locations = [
     {
       country: "Colombia",
-      count: 18,
+      count: 19,
       position: [4.5709, -74.2973],
       description: "18 divulgadores científicos",
       color: "#10b981" // Emerald
