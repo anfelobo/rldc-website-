@@ -636,7 +636,7 @@ function About() {
            {
       name: "Genesitamedialuna",
       role: "Divulgador cientifico",
-      photo: "/divulgadores/@logo_vacio.png",
+      photo: "/divulgadores/@genesitamedialuna.png",
       description: "Divulgadora cientifica con datos curiosos, recursos y explicaciones accesibles sobre biotecnología. También comparto contenido de humor y experiencias reales sobre la vida en el laboratorio y mi trayectoria como estudiante del área STEM",
       instagram: "@genesitamedialuna"
     }    ,
