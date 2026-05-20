@@ -627,7 +627,7 @@ function About() {
       instagram: "@astronona_deconfianza"
     },
            {
-      name: "Capítulos PIEEAFIT",
+      name: "Capítulos SPIEEAFIT",
       role: "Grupo estudiantil",
       photo: "/divulgadores/@capitulospieeafit.png",
       description: "Grupo estudiantil que promueve, divulga y fortalece el conocimiento científico, con énfasis en el fascinante mundo de la óptica y la fotónica",
@@ -644,7 +644,7 @@ function About() {
       name: "Cienciatropical",
       role: "Divulgador cientifico",
       photo: "/divulgadores/@cienciatropical.png",
-      description: "Pendiente",
+      description: "Conformamos un equipo interdisciplinario de jóvenes con un objetivo común: le apostamos a la divulgación de la ciencia y la naturaleza para contribuir en la construcción de un mejor país. Desde 2019 Ciencia Tropical ha utilizado las plataformas digitales para impulsar la divulgación de la biodiversidad, la ciencia participativa y construir conocimiento colectivo.",
       instagram: "@cienciatropical"
     }       ,
            {
