@@ -644,7 +644,7 @@ function About() {
       name: "Cienciatropical",
       role: "Divulgador cientifico",
       photo: "/divulgadores/@cienciatropical.png",
-      description: "Conformamos un equipo interdisciplinario de jóvenes con un objetivo común: le apostamos a la divulgación de la ciencia y la naturaleza para contribuir en la construcción de un mejor país. Desde 2019 Ciencia Tropical ha utilizado las plataformas digitales para impulsar la divulgación de la biodiversidad, la ciencia participativa y construir conocimiento colectivo.",
+      description: "Somos un equipo interdisciplinario de jóvenes comprometidos con la divulgación de la ciencia y la naturaleza para aportar a la construcción de un mejor país. Desde 2019, Ciencia Tropical impulsa la divulgación de la biodiversidad, la ciencia participativa y la construcción de conocimiento colectivo a través de plataformas digitales.",
       instagram: "@cienciatropical"
     }       ,
            {
