@@ -984,10 +984,10 @@ function Mapa() {
     <div className="mt-16">
       <div className="text-center mb-8">
         <h2 className="text-3xl font-bold mb-4 bg-gradient-to-r from-emerald-400 to-cyan-500 bg-clip-text text-transparent">
-          Nuestra Presencia en América Latina y España
+          Nuestra Presencia 
         </h2>
         <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-          Descubre dónde están ubicados nuestros divulgadores científicos en la región y en España
+          Descubre dónde están ubicados nuestros divulgadores científicos en la región y en Europa
         </p>
       </div>
 
