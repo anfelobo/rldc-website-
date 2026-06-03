@@ -654,6 +654,14 @@ function About() {
       description: "Dedicada a la  divulgación y pedagogía en ciencias del universo para aquellos que estén interesados en empezar y aprender sobre este campo de conocimiento.",
       instagram: "@avlvppr"
     }
+     ,
+           {
+      name: "Pol Pierre ",
+      role: "Divulgador cientifico",
+      photo: "/divulgadores/@polgenetica.png",
+      description: "Divulgación de genética para todo el mundo, hecha con rigor de verdad . Ahora mismo estoy recorriendo el genoma humano gen a gen, explicando por qué eres como eres, una pieza de tu ADN cada día",
+      instagram: "@polgenetica"
+    }
   ];
 
   return (
@@ -712,9 +720,9 @@ function Mapa() {
   const locations = [
     {
       country: "Colombia",
-      count: 19,
+      count: 20,
       position: [4.5709, -74.2973],
-      description: "18 divulgadores científicos",
+      description: "20 divulgadores científicos",
       color: "#10b981" // Emerald
     },
     {
@@ -744,6 +752,13 @@ function Mapa() {
       position: [6.4238, -66.5897],
       description: "1 divulgador científico",
       color: "#ec4899"
+    },
+    {
+      country: "España",
+      count: 1,
+      position: [40.4637, -3.7492],
+      description: "1 divulgador científico",
+      color: "#f43f5e"
     },
     /*
     {
@@ -961,18 +976,18 @@ function Mapa() {
     */
   ];
 
-  // Posición inicial centrada en América Latina
-  const centerMap = [10.5, -80];
-  const zoomLevel = 4;
+  // Posición inicial centrada para mostrar América Latina y España
+  const centerMap = [15, -25];
+  const zoomLevel = 2;
 
   return (
     <div className="mt-16">
       <div className="text-center mb-8">
         <h2 className="text-3xl font-bold mb-4 bg-gradient-to-r from-emerald-400 to-cyan-500 bg-clip-text text-transparent">
-          Nuestra Presencia en América Latina
+          Nuestra Presencia en América Latina y España
         </h2>
         <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-          Descubre dónde están ubicados nuestros divulgadores científicos en la región
+          Descubre dónde están ubicados nuestros divulgadores científicos en la región y en España
         </p>
       </div>
 
