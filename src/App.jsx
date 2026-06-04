@@ -667,7 +667,7 @@ function About() {
       name: "Isacientífica",
       role: "Divulgadora cientifica",
       photo: "/divulgadores/@isa_cientifica.png",
-      description: "Estudiante de Química en la Universidad del Valle con la misión de demostrar que la ciencia no es aburrida ni lejana. Aquí la ciencia y la ingeniería se transforman en historias sencillas, curiosas y cotidianas, conectando grandes descubrimientos con lo que ves a diario. Explicaciones accesibles, humor y un vistazo real al laboratorio. ¡Bienvenidos a explorar el universo a nivel atómico!",
+      description: "Estudiante de Química en la Universidad del Valle con la misión de demostrar que la ciencia no es aburrida ni lejana. Ciencia e ingeniería convertidas en historias sencillas, curiosas y cotidianas, con humor y un vistazo real al laboratorio. ¡Bienvenidos a explorar el universo a nivel atómico!",
       instagram: "@isa_cientifica"
     }
        ,
