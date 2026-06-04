@@ -662,6 +662,22 @@ function About() {
       description: "Divulgación de genética para todo el mundo, hecha con rigor de verdad . Ahora mismo estoy recorriendo el genoma humano gen a gen, explicando por qué eres como eres, una pieza de tu ADN cada día",
       instagram: "@polgenetica"
     }
+   ,
+           {
+      name: "Isacientífica",
+      role: "Divulgadora cientifica",
+      photo: "/divulgadores/@isa_cientifica.png",
+      description: "Estudiante de Química en la Universidad del Valle con la misión de demostrar que la ciencia no es aburrida ni lejana. Aquí la ciencia y la ingeniería se transforman en historias sencillas, curiosas y cotidianas, conectando grandes descubrimientos con lo que ves a diario. Explicaciones accesibles, humor y un vistazo real al laboratorio. ¡Bienvenidos a explorar el universo a nivel atómico!",
+      instagram: "@isa_cientifica"
+    }
+       ,
+           {
+      name: "Loren Mora",
+      role: "Divulgadora cientifica",
+      photo: "/divulgadores/@logo_vacio.png",
+      description: "Un espacio para descubrir personajes, eventos y curiosidades históricas de forma cercana y divertida, recordando además que la Historia también es cosa de mujeres",
+      instagram: "@404lorennltfound"
+    }
   ];
 
   return (
@@ -720,9 +736,9 @@ function Mapa() {
   const locations = [
     {
       country: "Colombia",
-      count: 20,
+      count: 22,
       position: [4.5709, -74.2973],
-      description: "20 divulgadores científicos",
+      description: "22 divulgadores científicos",
       color: "#10b981" // Emerald
     },
     {
