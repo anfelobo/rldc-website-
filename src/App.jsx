@@ -178,49 +178,48 @@ export default function App() {
 
 function Activities() {
   const events = [
-    {
-      title: "Festival de Astronomía de Villa de Leyva",
-      date: "Marzo 2026",
-      description: "Únete al festival astronómico más importante de Colombia. Observaciones nocturnas, charlas con expertos y actividades para toda la familia.",
-      icon: "🎭",
-      link: "https://festivaldeastronomia.com"
-    },
-     {
+         {
       title: "CISMA CONGRESO INTERNACIONAL DE STEAM Y METODOGIAS ACTIVAS",
-      date: "Noviembre 2026",
-      description: "Prepárate para vivir una experiencia transformadora con ponencias de alto impacto, talleres exclusivos y una comunidad vibrante que está cambiando el mundo.",
+      date: "Noviembre 2025",
+      description: "Congreso internacional que reúne expertos en educación STEAM para compartir metodologías innovadoras que promueven el aprendizaje activo, creativo y significativo.",
       icon: "⚛️",
       link: "https://www.instagram.com/cismasteamm"
     },
+    {
+      title: "Festival de Astronomía de Villa de Leyva",
+      date: "Marzo 2026",
+      description: "Encuentro científico que reúne a expertos y aficionados para observar el cielo, participar en actividades educativas y fomentar el interés por la astronomía y la exploración espacial.",
+      icon: "🎭",
+      link: "https://festivaldeastronomia.com"
+    },
   {
       title: "NASA Space Apps Challenge",
-      date: "Octubre 2026",
-      description: "Participa en el hackathon global de NASA Space Apps. Resuelve problemas reales del espacio con datos de la NASA y crea soluciones innovadoras.",
+      date: "Noviembre 2026",
+      description: "Hackatón global impulsado por la NASA donde equipos de todo el mundo desarrollan soluciones creativas a retos reales de ciencia, tecnología y exploración espacial.",
       icon: "🚀",
       link: "https://www.spaceappschallenge.org/"
     },
     {
       title: "SEMANA DEL CEREBRO",
       date: "Marzo 2026",
-      description: "La Semana del Cerebro Colombia fue mucho más que actividades: fue encuentro, curiosidad, preguntas que nos movieron por dentro y personas increíbles dejando huella en cada espacio.",
+      description: "Evento de divulgación científica que acerca la neurociencia al público mediante charlas, talleres y actividades educativas para comprender más sobre nuestro comportamiento",
       icon: "🌙",
       link: "https://www.instagram.com/baw_colombia?igsh=MXNlajI4YmZ5NjduaA%3D%3D"
     },
     {
       title: "Aula bajo las estrellas",
       date: "Agosto 2026",
-      description: "Descubre los secretos de la fotografía astronómica con expertos que compartirán técnicas y equipo necesario.",
+      description: "Encuentro educativo  que acerca la astronomía y la ciencia del cosmos a docentes y estudiantes mediante actividades, charlas y talleres.",
       icon: "🌙",
       /*icon: "📸",*/
       link: "https://rac.net.co/nuevositio/aula-bajo-las-estrellas-2026/"
     },
-   
     {
-      title: "Noche de las Estrellas",
-      date: "Julio 2026",
-      description: "Evento especial con telescopios profesionales y charlas sobre constelaciones y mitología astronómica.",
-      icon: "⭐",
-      link: "https://tusitio.com/fisica-cuantica"
+      title: "Festival de la lechona Bogotá",
+      date: "Junio 2026",
+      description: "Encuentro educativo  que acerca la astronomía y la ciencia del cosmos a docentes y estudiantes mediante actividades, charlas y talleres",
+      icon: "🍖",
+      link: "https://www.instagram.com/festivaldelalechonaoficial?igsh=MWU2YzFnaGh6N3Zvdw%3D%3D"
     }
   ];
 
@@ -231,8 +230,7 @@ function Activities() {
           Próximas Actividades
         </h1>
         <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-          Descubre nuestros eventos científicos diseñados para inspirar y educar.
-          Desde observaciones astronómicas hasta talleres interactivos.
+          Descubre los eventos científicos que hemos dado a conocer y que están impulsando la ciencia, la innovación y el conocimiento en nuestra red.
         </p>
       </div>
 
@@ -457,7 +455,7 @@ function HomePage({ setPage }) {
 function About() {
   const teamMembers = [
        {
-      name: "Semillero Ceres",
+      name: "Fundación Ceres",
       role: "Semillero de investigación",
       photo: "/divulgadores/@semillero_ceres.png",
       description: "Dedicada  al asesoramiento, investigación y divulgación de proyectos científicos, promoviendo el conocimiento, la innovación y el desarrollo en distintos campos de la ciencia.",
@@ -471,7 +469,7 @@ function About() {
       instagram: "@semillero_tejedores"
     },
     {
-      name: "Proyecto Constelación",
+      name: "Constelación - Conectando Estrellas",
       role: "Divulgador cientifico",
       photo: "/divulgadores/@proyecto_constelacion_.png",
       description: "Somos una cuenta de divulgación que crea contenido para que las ciencias astronómicas sean más visibles y mucho más fáciles de entender. Además, apoyamos el trabajo de las mujeres en la ciencia y visibilizamos su labor; realizamos publicaciones, talleres y charlas relacionadas con esta temática.",
@@ -601,7 +599,7 @@ function About() {
        {
       name: "Samuel Restrepo",
       role: "Divulgador cientifico",
-      photo: "/divulgadores/@logo_vacio.png",
+      photo: "/divulgadores/@restrepolito__.png",
       description: "El contenido que comparto es sobre geología, explicando conceptos, fenómenos, temas, o acontecimientos de actualidad que en esencia pueden ser complejos en términos técnicos de una manera sencilla, con el fin de expandir el conocimientos de estos mientras le doy visibilidad a la geología como ciencia.",
       instagram: "@restrepolito__"
     },
@@ -646,15 +644,7 @@ function About() {
       photo: "/divulgadores/@cienciatropical.png",
       description: "Somos un equipo interdisciplinario de jóvenes comprometidos con la divulgación de la ciencia y la naturaleza para aportar a la construcción de un mejor país. Desde 2019, Ciencia Tropical impulsa la divulgación de la biodiversidad, la ciencia participativa y la construcción de conocimiento colectivo a través de plataformas digitales.",
       instagram: "@cienciatropical"
-    }       ,
-           {
-      name: "Alejandra Villalvazo",
-      role: "Divulgador cientifico",
-      photo: "/divulgadores/@logo_vacio.png",
-      description: "Dedicada a la  divulgación y pedagogía en ciencias del universo para aquellos que estén interesados en empezar y aprender sobre este campo de conocimiento.",
-      instagram: "@avlvppr"
-    }
-     ,
+    } ,
            {
       name: "Pol Pierre ",
       role: "Divulgador cientifico",
@@ -669,14 +659,51 @@ function About() {
       photo: "/divulgadores/@isa_cientifica.png",
       description: "Estudiante de Química en la Universidad del Valle con la misión de demostrar que la ciencia no es aburrida ni lejana. Ciencia e ingeniería convertidas en historias sencillas, curiosas y cotidianas, con humor y un vistazo real al laboratorio. ¡Bienvenidos a explorar el universo a nivel atómico!",
       instagram: "@isa_cientifica"
-    }
-       ,
+    },
            {
       name: "Loren Mora",
       role: "Divulgadora cientifica",
-      photo: "/divulgadores/@logo_vacio.png",
+      photo: "/divulgadores/@404lorennltfound.png",
       description: "Un espacio para descubrir personajes, eventos y curiosidades históricas de forma cercana y divertida, recordando además que la Historia también es cosa de mujeres",
       instagram: "@404lorennltfound"
+    }
+    ,
+           {
+      name: "Mafe Vasquez",
+      role: "Divulgadora cientifica",
+      photo: "/divulgadores/@mafe_vasquezzz.png",
+      description: "Aunque la biología es mi hogar, la curiosidad me lleva a todas partes. Comparto historias y curiosidades que revelan lo extraordinario de nuestro mundo. Mi objetivo es transformar el conocimiento en asombro y hacer que más personas miren la realidad con nuevos ojos.",
+      instagram: "@mafe_vasquezzz"
+    }
+        ,
+           {
+      name: "Valbastaya",
+      role: "Divulgadora cientifica",
+      photo: "/divulgadores/@valbastaya.png",
+      description: "Divulgadora científica y estudiante de Química Farmacéutica. Me apasiona demostrar que la química está presente en nuestra vida diaria y que cualquiera puede entenderla cuando se explica con claridad, curiosidad y un poco de creatividad.",
+      instagram: "@valbastaya"
+    }
+   ,
+    {
+      name: "Julian",
+      role: "Divulgador cientifico",
+      photo: "/divulgadores/@cosmo.ciencia.png",
+      description: "Cuenta de divulgación en Astronomía y ciencia .",
+      instagram: "@cosmo.ciencia"
+    },
+        {
+      name: "Yadira",
+      role: "Divulgadora cientifica",
+      photo: "/divulgadores/@lageoloca.png",
+      description: "Cuenta de divulgación en Astronomía y ciencia .",
+      instagram: "@lageoloca"
+    },
+        {
+      name: "Daniela Rodriguez  sanchez",
+      role: "Divulgadora cientifica",
+      photo: "/divulgadores/@logo_vacio.png",
+      description: "Divulgadora cultural que busca descubrir las historias, tradiciones, curiosidades y aprendizajes que hay detrás de cada experiencia. ",
+      instagram: "@dangoghoficial"
     }
   ];
 
